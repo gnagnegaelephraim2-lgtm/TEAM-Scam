@@ -286,7 +286,7 @@ const DataHub: React.FC = () => {
                 <i className="fas fa-microchip text-4xl text-blue-600/20 group-hover:scale-110 transition-transform"></i>
               </div>
               
-              <div className="inline-block border-2 border-slate-100/10 dark:border-white/10 rounded-2xl p-4 mb-8">
+              <div className="inline-block border border-slate-100/10 dark:border-white/10 rounded-2xl p-4 mb-8">
                 <h3 className="text-2xl font-black tracking-tight flex items-center space-x-3 text-left">
                   <i className="fas fa-chart-network text-blue-500"></i>
                   <span>Cognitive Skills Balance</span>
@@ -365,13 +365,13 @@ const DataHub: React.FC = () => {
                 </div>
               </div>
 
-              <div className="bg-blue-600 rounded-[40px] p-10 flex flex-col justify-center items-center text-center shadow-2xl relative overflow-hidden group">
+              <div className="bg-blue-600 rounded-[40px] p-10 flex flex-col justify-center items-center text-center shadow-2xl relative overflow-hidden group border border-white/10">
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform"></div>
                 <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
-                  <i className="fas fa-terminal text-2xl text-white"></i>
+                  <i className="fas fa-bolt text-2xl text-white"></i>
                 </div>
-                <h4 className="text-lg font-black text-white mb-2 uppercase tracking-tighter">Enter Logic Matrix</h4>
-                <p className="text-xs text-white/70 mb-8 font-bold uppercase tracking-widest leading-relaxed">Execute stress-tests and simulate national skill deployments in real-time.</p>
+                <h4 className="text-lg font-black text-white mb-2 uppercase tracking-tighter">NATIONAL SKILL AUDIT TERMINAL</h4>
+                <p className="text-xs text-white/70 mb-8 font-bold uppercase tracking-widest leading-relaxed">MEASURE HIGHER-ORDER THINKING SKILLS AND VALIDATE STUDENT COMPETENCIES THROUGH REAL-WORLD MISSION SIMULATIONS.</p>
                 <button 
                   onClick={handleLaunchModule}
                   className="w-full py-4 bg-white text-blue-600 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] hover:bg-gray-100 transition-all active:scale-95 shadow-xl"
@@ -424,7 +424,7 @@ const DataHub: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-[40px] p-8 group">
+            <div className="bg-slate-900/40 border border-emerald-500/20 rounded-[40px] p-8 group">
               <h4 className="text-[11px] font-black text-emerald-500 uppercase tracking-widest mb-4 flex items-center">
                 <i className="fas fa-vial mr-2"></i>
                 Pilot Insights

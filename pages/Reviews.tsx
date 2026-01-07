@@ -95,12 +95,12 @@ const Reviews: React.FC = () => {
             <p className="text-gray-400 dark:text-gray-500 mb-12 max-w-2xl mx-auto text-lg leading-relaxed font-medium text-center">
               We conducted research by sending questionnaires to over 50 students in Cameroon aged between 12-18 to validate our assumptions about the current educational landscape.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
               <a 
-                href={`mailto:contact@team-scaam.org`} 
+                href={`mailto:ayuksandrine5@gmail.com`} 
                 className="bg-blue-600 text-white px-10 py-5 rounded-[24px] font-black uppercase tracking-widest text-[12px] hover:bg-blue-500 transition-all shadow-2xl shadow-blue-600/20 active:scale-95"
               >
-                Inquire for Pilot
+                Contact Us
               </a>
               <Link 
                 to="/data-hub"
