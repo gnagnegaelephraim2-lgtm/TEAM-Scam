@@ -1,0 +1,98 @@
+
+import React from 'react';
+import { VIDEOS, SOCIALS } from '../constants';
+
+const VideoGrid: React.FC = () => {
+  const FALLBACK_THUMBNAIL = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600";
+
+  const handleOpenVideo = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
+  return (
+    <div id="video-showcase" className="py-24 bg-slate-50 dark:bg-slate-900/50 relative overflow-hidden transition-colors duration-300">
+      <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#1e40af 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
+          <div className="max-w-2xl text-left">
+            <h2 className="text-blue-600 font-black uppercase tracking-[0.2em] text-[10px] mb-3">
+              Mission Archives
+            </h2>
+            <h3 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight tracking-tighter">
+              Challenge <span className="gradient-text">Showcase</span>
+            </h3>
+            <p className="mt-4 text-base text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
+              Direct access to Mission Genesis documentation. Every frame captures the transition from passive rote learning to applied innovation.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+            <a
+              href={SOCIALS.YOUTUBE}
+              target="_blank"
+              rel="noreferrer"
+              className="px-8 py-4 bg-red-600 text-white rounded-2xl text-[11px] font-black hover:bg-red-700 transition-all shadow-lg shadow-red-600/20 flex items-center justify-center space-x-2 group"
+            >
+              <i className="fab fa-youtube text-lg"></i>
+              <span>Official Channel</span>
+            </a>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {VIDEOS.map((video, index) => {
+            const isFeatured = index === 0;
+            return (
+              <div
+                key={video.id}
+                onClick={() => handleOpenVideo(video.url)}
+                className={`group cursor-pointer bg-white dark:bg-slate-800 rounded-[32px] overflow-hidden border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 flex flex-col ${isFeatured ? 'md:col-span-2 lg:col-span-2' : ''}`}
+              >
+                <div
+                  className={`relative overflow-hidden ${isFeatured ? 'aspect-[16/7]' : 'aspect-video'}`}
+                >
+                  <img
+                    src={video.thumbnail}
+                    alt={video.title}
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = FALLBACK_THUMBNAIL;
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gray-900/10 group-hover:bg-gray-900/5 transition-colors flex items-center justify-center">
+                    <div className="w-14 h-14 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center text-white shadow-xl transform group-hover:scale-110 group-hover:bg-white group-hover:text-blue-600 transition-all duration-300">
+                      <i className="fas fa-play text-[10px] ml-1"></i>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 bg-blue-600/90 backdrop-blur-md text-white text-[9px] font-black uppercase tracking-widest rounded-lg">
+                      {video.category}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="p-8 flex flex-col justify-between flex-grow">
+                  <div>
+                    <h4 className={`font-black text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 transition-colors leading-tight ${isFeatured ? 'text-2xl md:text-3xl' : 'text-xl'}`}>
+                      {video.title}
+                    </h4>
+                  </div>
+                  
+                  <div className="flex items-center justify-between pt-6 border-t border-slate-50 dark:border-slate-700 mt-4">
+                    <div className="text-[10px] font-black text-blue-600 flex items-center space-x-2 tracking-[0.2em] group/btn">
+                      <span>VIEW ON YOUTUBE</span>
+                      <i className="fas fa-external-link-alt text-[8px] group-hover/btn:translate-x-1 transition-transform"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default VideoGrid;
