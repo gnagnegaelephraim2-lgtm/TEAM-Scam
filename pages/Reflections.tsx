@@ -25,24 +25,24 @@ const Reflections: React.FC = () => {
   };
 
   return (
-    <div className="pt-32 pb-24 bg-white dark:bg-slate-950 transition-colors duration-300">
+    <div className="pt-32 pb-24 bg-slate-100 dark:bg-slate-950 transition-colors duration-300 min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="mb-24 text-left border-l-4 border-blue-600 pl-8 relative">
            <div className="absolute top-0 right-0 opacity-10 hidden lg:block">
               <i className="fas fa-book-open text-[120px] text-blue-600"></i>
            </div>
           <h2 className="text-blue-600 font-black uppercase tracking-[0.2em] text-[10px] mb-4">Leadership Journals</h2>
-          <h1 className="text-4xl md:text-7xl font-black text-gray-900 dark:text-white mb-6 tracking-tighter">
+          <h1 className="text-4xl md:text-7xl font-black text-slate-900 dark:text-white mb-6 tracking-tighter">
             E_lab<span className="bg-blue-600 text-white px-4 rounded-xl inline-block transform -rotate-1">Reflections</span>
           </h1>
-          <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl font-medium">
+          <p className="text-lg text-slate-600 dark:text-gray-400 leading-relaxed max-w-2xl font-medium">
             Internal debriefs from the Team S.C.A.A.M think-tank. These personal journals document the psychological and operational shifts experienced during the Mission Genesis lifecycle.
           </p>
         </header>
 
         <div className="space-y-24 relative">
           {/* Timeline Connector */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-slate-100 dark:bg-slate-800 hidden lg:block -translate-x-1/2"></div>
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 dark:bg-slate-800 hidden lg:block -translate-x-1/2"></div>
 
           {TEAM_MEMBERS.map((member, index) => {
              const isEven = index % 2 === 0;
@@ -55,7 +55,7 @@ const Reflections: React.FC = () => {
                >
                  {/* Journal Entry Card */}
                  <div className="w-full lg:w-3/5 group">
-                   <div className="relative p-10 md:p-14 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[50px] shadow-sm group-hover:shadow-2xl transition-all duration-700 overflow-hidden">
+                   <div className="relative p-10 md:p-14 bg-white/80 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-[50px] shadow-sm group-hover:shadow-2xl transition-all duration-700 overflow-hidden backdrop-blur-sm">
                       {/* Quote Mark Decoration */}
                       <div className="absolute top-0 right-0 p-12 opacity-[0.03] dark:opacity-[0.05] pointer-events-none">
                          <i className="fas fa-quote-right text-[120px] text-blue-600"></i>
@@ -67,14 +67,14 @@ const Reflections: React.FC = () => {
                            <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">Entry ID: {member.id.toUpperCase()}-00{index + 1}</span>
                         </div>
                         
-                        <div className="text-gray-700 dark:text-slate-300 text-lg md:text-xl leading-relaxed italic font-medium mb-12 font-serif whitespace-pre-wrap">
+                        <div className="text-slate-700 dark:text-slate-300 text-lg md:text-xl leading-relaxed italic font-medium mb-12 font-serif whitespace-pre-wrap">
                           "{journalText}"
                         </div>
 
-                        <div className="pt-10 border-t border-slate-50 dark:border-slate-800/50 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+                        <div className="pt-10 border-t border-slate-100 dark:border-slate-800/50 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
                            <div>
-                              <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Functional Contribution</h4>
-                              <p className="text-sm font-bold text-gray-900 dark:text-white">{member.contribution}</p>
+                              <h4 className="text-[10px] font-black text-slate-400 dark:text-gray-500 uppercase tracking-widest mb-1">Functional Contribution</h4>
+                              <p className="text-sm font-bold text-slate-900 dark:text-white">{member.contribution}</p>
                            </div>
                            <div className="shrink-0 flex items-center space-x-2">
                               <span className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
@@ -98,15 +98,15 @@ const Reflections: React.FC = () => {
                         />
                      </div>
                    </div>
-                   <h3 className="text-3xl font-black text-gray-900 dark:text-white mb-2 tracking-tighter">{member.name}</h3>
+                   <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-2 tracking-tighter">{member.name}</h3>
                    <div className="flex flex-col gap-1">
                       <span className="text-blue-600 font-black uppercase tracking-widest text-xs">{member.role}</span>
-                      <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{member.country}</span>
+                      <span className="text-[10px] font-bold text-slate-400 dark:text-gray-500 uppercase tracking-widest">{member.country}</span>
                    </div>
                  </div>
 
                  {/* Desktop Center Dot */}
-                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white dark:border-slate-950 shadow-lg hidden lg:block z-20"></div>
+                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-slate-100 dark:border-slate-950 shadow-lg hidden lg:block z-20"></div>
                </div>
              );
           })}

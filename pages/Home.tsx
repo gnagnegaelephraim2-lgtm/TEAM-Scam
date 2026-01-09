@@ -11,10 +11,10 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen transition-colors duration-300">
+    <div className="min-h-screen transition-colors duration-300 bg-slate-100 dark:bg-slate-950">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden hero-pattern">
-        <div className="absolute inset-0 z-0 opacity-[0.05] dark:opacity-[0.1] grayscale pointer-events-none">
+        <div className="absolute inset-0 z-0 opacity-[0.04] dark:opacity-[0.1] grayscale pointer-events-none">
           <img 
             src="https://i.ibb.co/GvgnFhMG/Pic2.jpg" 
             className="w-full h-full object-cover" 
@@ -22,19 +22,19 @@ const Home: React.FC = () => {
           />
         </div>
 
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50 dark:bg-blue-900/20 rounded-full blur-[120px] opacity-60 -mr-48 -mt-48 animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-50 dark:bg-indigo-900/20 rounded-full blur-[100px] opacity-40 -ml-24 -mb-24"></div>
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-200/30 dark:bg-blue-900/20 rounded-full blur-[120px] opacity-40 -mr-48 -mt-48 animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-200/30 dark:bg-indigo-900/20 rounded-full blur-[100px] opacity-30 -ml-24 -mb-24"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-7 text-left">
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800/50 rounded-full mb-8 animate-fade-in shadow-sm">
+              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-slate-200/80 dark:bg-blue-900/30 border border-slate-300/50 dark:border-blue-800/50 rounded-full mb-8 animate-fade-in shadow-sm">
                 <span className="w-2.5 h-2.5 bg-blue-600 rounded-full animate-ping"></span>
-                <span className="text-[10px] font-black text-blue-700 dark:text-blue-300 uppercase tracking-[0.2em]">S.C.A.A.M Impact</span>
+                <span className="text-[10px] font-black text-slate-700 dark:text-blue-300 uppercase tracking-[0.2em]">S.C.A.A.M Impact</span>
               </div>
               
               <div className="mb-8">
-                <h1 className="text-6xl md:text-8xl lg:text-[120px] font-black text-gray-950 dark:text-white leading-[0.85] tracking-tighter text-left uppercase mb-4">
+                <h1 className="text-6xl md:text-8xl lg:text-[120px] font-black text-slate-900 dark:text-white leading-[0.85] tracking-tighter text-left uppercase mb-4">
                   TEAM
                 </h1>
                 <h1 className="text-6xl md:text-8xl lg:text-[120px] font-black text-blue-600 leading-[0.85] tracking-tighter text-left uppercase">
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
                 </h1>
               </div>
               
-              <p className="text-xl md:text-2xl text-gray-500 dark:text-gray-400 mb-12 leading-relaxed max-w-xl font-medium text-left">
+              <p className="text-xl md:text-2xl text-slate-600 dark:text-gray-400 mb-12 leading-relaxed max-w-xl font-medium text-left">
                 Equipping students with the knowledge, skills, and mindset to become active, innovative contributors to society.
               </p>
               
@@ -50,7 +50,7 @@ const Home: React.FC = () => {
                 <div className="relative group">
                   <Link 
                     to="/challenges" 
-                    className="group relative bg-gray-950 dark:bg-black text-white px-10 py-5 rounded-[24px] text-[13px] font-black uppercase tracking-widest shadow-2xl hover:bg-blue-600 transition-all flex items-center justify-center space-x-3 active:scale-95 z-10"
+                    className="group relative bg-slate-900 dark:bg-black text-white px-10 py-5 rounded-[24px] text-[13px] font-black uppercase tracking-widest shadow-2xl hover:bg-blue-600 transition-all flex items-center justify-center space-x-3 active:scale-95 z-10"
                   >
                     <span>Challenges</span>
                     <i className="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
 
                 <Link 
                   to="/reviews" 
-                  className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl text-gray-950 dark:text-white px-10 py-5 rounded-[24px] text-[13px] font-black uppercase tracking-widest shadow-xl hover:bg-white dark:hover:bg-slate-700 transition-all text-center border border-white/20 active:scale-95"
+                  className="bg-white/80 dark:bg-slate-800/70 backdrop-blur-xl text-slate-900 dark:text-white px-10 py-5 rounded-[24px] text-[13px] font-black uppercase tracking-widest shadow-lg hover:bg-white dark:hover:bg-slate-700 transition-all text-center border border-slate-200 active:scale-95"
                 >
                   Our Story
                 </Link>
@@ -68,7 +68,7 @@ const Home: React.FC = () => {
             
             <div className="lg:col-span-5 relative hidden lg:block">
               <div className="relative">
-                <div className="relative w-full max-w-[450px] mx-auto aspect-[4/5] rounded-[48px] overflow-hidden border-[12px] border-white dark:border-slate-800 shadow-2xl ring-1 ring-slate-100 dark:ring-slate-700 transform rotate-2">
+                <div className="relative w-full max-w-[450px] mx-auto aspect-[4/5] rounded-[48px] overflow-hidden border-[12px] border-slate-50 dark:border-slate-800 shadow-2xl ring-1 ring-slate-200 dark:ring-slate-700 transform rotate-2">
                   <img 
                     src="https://i.ibb.co/svFD3GyR/Whats-App-Image-2026-01-07-at-4-50-45-PM-4.jpg" 
                     alt="Team collaboration" 
@@ -88,7 +88,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Problem Statement Section */}
-      <section id="problem-statement-info" className="py-24 bg-gray-950 dark:bg-black relative overflow-hidden text-left">
+      <section id="problem-statement-info" className="py-24 bg-slate-900 dark:bg-black relative overflow-hidden text-left">
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
           <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=1500" className="w-full h-full object-cover grayscale" alt="Context" />
         </div>
@@ -131,12 +131,12 @@ const Home: React.FC = () => {
       </section>
 
       {/* Mission Statement Section */}
-      <section id="mission-statement-info" className="py-24 bg-slate-50 dark:bg-slate-900/50 text-left transition-colors duration-300">
+      <section id="mission-statement-info" className="py-24 bg-slate-200/40 dark:bg-slate-900/50 text-left transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl text-left">
              <h2 className="text-blue-600 font-black uppercase tracking-[0.3em] text-[10px] mb-8 text-left">Mission Statement</h2>
              <div className="space-y-8">
-               <p className="text-gray-500 dark:text-gray-400 text-lg md:text-xl font-medium leading-relaxed max-w-4xl">
+               <p className="text-slate-600 dark:text-gray-400 text-lg md:text-xl font-medium leading-relaxed max-w-4xl">
                   Our mission is to provide relevant quality education for secondary school students in <span className="text-blue-600">Cameroon</span>, equipping them with the knowledge, skills, and mindset to become active, innovative contributors to society.
                </p>
              </div>
@@ -145,7 +145,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Proposed Solution Section */}
-      <section id="proposed-solution" className="py-24 bg-gray-950 dark:bg-black text-left transition-colors duration-300 relative overflow-hidden">
+      <section id="proposed-solution" className="py-24 bg-slate-900 dark:bg-black text-left transition-colors duration-300 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none grayscale">
           <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000" className="w-full h-full object-cover" alt="Context" />
         </div>
@@ -188,15 +188,15 @@ const Home: React.FC = () => {
       <VideoGrid />
 
       {/* Team Section */}
-      <section className="py-24 bg-gray-950 dark:bg-black text-left transition-colors duration-300 relative">
+      <section className="py-24 bg-slate-100 dark:bg-black text-left transition-colors duration-300 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
             <div className="text-left">
-              <h3 className="text-5xl md:text-6xl font-black text-white tracking-tighter text-left">
+              <h3 className="text-5xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter text-left">
                 Our <span className="bg-blue-600 text-white px-5 py-2 rounded-lg shadow-xl inline-block ml-1">Team</span>
               </h3>
             </div>
-            <Link to="/reviews" className="px-10 py-5 bg-slate-900 text-white font-black text-[13px] uppercase tracking-[0.2em] rounded-2xl hover:bg-blue-600 transition-all shadow-2xl active:scale-95 border border-white/5">
+            <Link to="/reviews" className="px-10 py-5 bg-slate-200/50 dark:bg-slate-900 text-slate-900 dark:text-white font-black text-[13px] uppercase tracking-[0.2em] rounded-2xl hover:bg-blue-600 hover:text-white transition-all shadow-xl active:scale-95 border border-slate-300/50 dark:border-white/5">
               Our Story
             </Link>
           </div>
@@ -204,7 +204,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">
             {TEAM_MEMBERS.map(member => (
               <div key={member.id} className="group text-center">
-                <div className="relative aspect-square max-w-[180px] mx-auto rounded-[32px] overflow-hidden mb-6 border-4 border-slate-900 shadow-lg">
+                <div className="relative aspect-square max-w-[180px] mx-auto rounded-[32px] overflow-hidden mb-6 border-4 border-white dark:border-slate-900 shadow-lg">
                   <img 
                     src={member.image} 
                     alt={member.name} 
@@ -213,7 +213,7 @@ const Home: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
-                <h5 className="text-sm font-black text-white leading-tight mb-1">{member.name}</h5>
+                <h5 className="text-sm font-black text-slate-900 dark:text-white leading-tight mb-1">{member.name}</h5>
                 <p className="text-[9px] font-bold text-blue-600 uppercase tracking-widest">{member.country}</p>
               </div>
             ))}
