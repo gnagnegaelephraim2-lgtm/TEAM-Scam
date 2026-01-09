@@ -19,6 +19,7 @@ const Home: React.FC = () => {
             src="https://i.ibb.co/GvgnFhMG/Pic2.jpg" 
             className="w-full h-full object-cover" 
             alt="Technical Schematic Background"
+            decoding="async"
           />
         </div>
 
@@ -74,6 +75,7 @@ const Home: React.FC = () => {
                     alt="Team collaboration" 
                     className="w-full h-full object-cover transition-transform duration-[2.5s] hover:scale-105"
                     onError={handleImageError}
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 via-transparent to-transparent"></div>
                 </div>
@@ -90,7 +92,13 @@ const Home: React.FC = () => {
       {/* Problem Statement Section */}
       <section id="problem-statement-info" className="py-24 bg-slate-900 dark:bg-black relative overflow-hidden text-left">
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
-          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=1500" className="w-full h-full object-cover grayscale" alt="Context" />
+          <img 
+            src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=70&w=1200" 
+            className="w-full h-full object-cover grayscale" 
+            alt="Context" 
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -147,7 +155,13 @@ const Home: React.FC = () => {
       {/* Proposed Solution Section */}
       <section id="proposed-solution" className="py-24 bg-slate-900 dark:bg-black text-left transition-colors duration-300 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none grayscale">
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000" className="w-full h-full object-cover" alt="Context" />
+          <img 
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=70&w=1200" 
+            className="w-full h-full object-cover" 
+            alt="Context" 
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -210,6 +224,8 @@ const Home: React.FC = () => {
                     alt={member.name} 
                     className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110" 
                     onError={handleImageError} 
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>

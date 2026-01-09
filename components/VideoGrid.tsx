@@ -3,7 +3,7 @@ import React from 'react';
 import { VIDEOS, SOCIALS } from '../constants';
 
 const VideoGrid: React.FC = () => {
-  const FALLBACK_THUMBNAIL = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600";
+  const FALLBACK_THUMBNAIL = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=70&w=800";
 
   const handleOpenVideo = (url: string) => {
     window.open(url, '_blank', 'noopener,noreferrer');
@@ -59,6 +59,8 @@ const VideoGrid: React.FC = () => {
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = FALLBACK_THUMBNAIL;
                     }}
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gray-900/10 group-hover:bg-gray-900/5 transition-colors flex items-center justify-center">
                     <div className="w-14 h-14 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center text-white shadow-xl transform group-hover:scale-110 group-hover:bg-white group-hover:text-blue-600 transition-all duration-300">

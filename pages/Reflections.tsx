@@ -95,6 +95,8 @@ const Reflections: React.FC = () => {
                           alt={member.name} 
                           className="w-full h-full object-cover"
                           onError={handleImageError}
+                          loading="lazy"
+                          decoding="async"
                         />
                      </div>
                    </div>

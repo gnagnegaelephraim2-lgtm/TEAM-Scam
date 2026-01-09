@@ -48,6 +48,8 @@ const Challenges: React.FC = () => {
                       alt={challenge.title} 
                       className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
                       onError={handleImageError}
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute top-4 left-4">
                       <span className="px-4 py-1.5 bg-blue-600 text-white text-[9px] font-black uppercase tracking-widest rounded-full shadow-lg">

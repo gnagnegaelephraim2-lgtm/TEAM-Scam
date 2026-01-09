@@ -20,6 +20,7 @@ const Reviews: React.FC = () => {
             alt="Story Background" 
             className="w-full h-full object-cover"
             onError={handleImageError}
+            decoding="async"
           />
           {/* Overlay to ensure readability and blend with the light theme */}
           <div className="absolute inset-0 bg-white/70 dark:bg-slate-950/80 backdrop-blur-[1px]"></div>
@@ -58,6 +59,8 @@ const Reviews: React.FC = () => {
                       alt={member.name} 
                       className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
                       onError={handleImageError}
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>
