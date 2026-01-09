@@ -43,7 +43,7 @@ const TermsOfMission: React.FC = () => {
           </section>
 
           <div className="mt-16 pt-8 border-t border-slate-400 dark:border-slate-800 text-sm text-slate-500 font-bold">
-            Last Updated: January 2026 | Mission Code: MISSION-GENESIS
+            Last Updated: January 2026 | Mission Code: GENESIS-BUEA-ALPHA
           </div>
         </div>
       </div>
