@@ -21,13 +21,13 @@ const Challenges: React.FC = () => {
   };
 
   return (
-    <div className="pt-32 pb-24 bg-slate-100 dark:bg-slate-950 transition-colors duration-300 min-h-screen">
+    <div className="pt-32 pb-24 bg-slate-200 dark:bg-slate-950 transition-colors duration-300 min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="mb-24 text-left border-l-4 border-blue-600 pl-8">
           <h1 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6 tracking-tighter">
             E_Lab <span className="gradient-text">Challenges</span>
           </h1>
-          <p className="text-lg text-slate-600 dark:text-gray-400 leading-relaxed max-w-2xl font-medium">
+          <p className="text-lg text-slate-700 dark:text-gray-400 leading-relaxed max-w-2xl font-medium">
             A meticulous chronological mapping of the eLab development phases, tracing our evolution from initial discovery to mission deployment.
           </p>
         </header>
@@ -42,7 +42,7 @@ const Challenges: React.FC = () => {
               <div className="w-full lg:w-5/12 sticky top-32">
                 <div className="relative group">
                   <div className="absolute -inset-2 bg-blue-600/5 rounded-[32px] blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-[40px] border-[8px] border-slate-50 dark:border-slate-800 shadow-xl ring-1 ring-slate-200/50 dark:ring-slate-700">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-[40px] border-[8px] border-slate-100 dark:border-slate-800 shadow-xl ring-1 ring-slate-300 dark:ring-slate-700">
                     <img 
                       src={challenge.image} 
                       alt={challenge.title} 
@@ -64,11 +64,11 @@ const Challenges: React.FC = () => {
                   <span className="text-blue-600 font-black uppercase tracking-widest text-[10px]">Strategic Sprint 0{index + 1}</span>
                 </div>
                 <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-8 tracking-tight">{challenge.title}</h2>
-                <div className="space-y-6 text-slate-700 dark:text-gray-400 leading-relaxed font-medium text-base">
+                <div className="space-y-6 text-slate-800 dark:text-gray-400 leading-relaxed font-medium text-base">
                   <p>{challenge.description}</p>
                 </div>
                 
-                <div className="mt-10 bg-white/80 dark:bg-slate-900 p-8 rounded-[40px] border border-slate-200 dark:border-slate-800 relative overflow-hidden group/card transition-colors shadow-sm">
+                <div className="mt-10 bg-slate-50/80 dark:bg-slate-900 p-8 rounded-[40px] border border-slate-300 dark:border-slate-800 relative overflow-hidden group/card transition-colors shadow-sm">
                   <div className="absolute top-0 right-0 p-8 opacity-[0.03] dark:opacity-5">
                     <i className="fas fa-lightbulb text-6xl text-blue-600"></i>
                   </div>

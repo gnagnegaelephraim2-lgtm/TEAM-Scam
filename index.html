@@ -31,7 +31,7 @@
       body {
         font-family: 'Plus Jakarta Sans', sans-serif;
         scroll-behavior: smooth;
-        background-color: #f1f5f9; /* Slate-100: A soft light gray */
+        background-color: #e2e8f0; /* Slate-200: A pronounced dark gray for light mode */
         color: var(--brand-dark);
         transition: background-color 0.3s ease, color 0.3s ease;
       }
@@ -45,17 +45,17 @@
         -webkit-text-fill-color: transparent;
       }
       .glass-card {
-        background: rgba(241, 245, 249, 0.75); /* Soft slate tint */
+        background: rgba(226, 232, 240, 0.8); /* Slate-200 tint */
         backdrop-filter: blur(16px);
-        border: 1px solid rgba(226, 232, 240, 0.8);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(203, 213, 225, 0.8);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
       }
       .dark .glass-card {
         background: rgba(15, 23, 42, 0.7);
         border: 1px solid rgba(255, 255, 255, 0.05);
       }
       .hero-pattern {
-        background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+        background-image: radial-gradient(#94a3b8 1px, transparent 1px);
         background-size: 40px 40px;
       }
       .dark .hero-pattern {
@@ -76,20 +76,20 @@
         width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #e2e8f0;
+        background: #cbd5e1;
       }
       .dark ::-webkit-scrollbar-track {
         background: #020617;
       }
       ::-webkit-scrollbar-thumb {
-        background: #cbd5e1;
+        background: #94a3b8;
         border-radius: 10px;
       }
       .dark ::-webkit-scrollbar-thumb {
         background: #1e293b;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #94a3b8;
+        background: #64748b;
       }
     </style>
   <script type="importmap">
