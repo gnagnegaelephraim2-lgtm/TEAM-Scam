@@ -82,7 +82,7 @@ export const CHALLENGES: Challenge[] = [
     date: "E-LAB Challenge 03",
     description: "E-LAB challenge 3 was focused on community service. We chose to volunteer at the Living word community beach Braai. It was a day of bonding, wellness and sharing. The Braai happened at the Mon Choisy beach. We mainly helped with setting up, serving food, taking care of some kids and engaging with the people to ensure everyone was having fun and had a pair of helping hands when it was needed.",
     impact: "We were also in charge of helping clean up and taking the trash out. We learnt that community service doesn’t always mean doing something big, simply showing up and supporting others as well as being a helping hand.",
-    image: "https://images.unsplash.com/photo-1559027615-cd7d730ee0bb?auto=format&fit=crop&q=80&w=800"
+    image: "https://i.ibb.co/P816TbB/F-1.jpg"
   },
   {
     id: "challenge4",
@@ -90,7 +90,7 @@ export const CHALLENGES: Challenge[] = [
     date: "E-LAB Challenge 04",
     description: "E-LAB challenge 4 was about us putting in practice our research skills, systems thinking, and human-centered design. From the problem we are working on, we had to find an organization, whose operations falls under our chosen G.C.G.O, and we were to interview them to get to know their day-to-day operations, and what they are doing to combat their focused issue. We interviewed Mr. Teh Allen Kuma, CEO and President of Knowledge Center, Cameroon: an institution reimagining how African talent is discovered, trained, and launched onto the global stage.",
     impact: "Unlike most schools in Cameroon, KC does not focus on rote memorization. Instead, it emphasizes human-centered solutions, demonstrating how creativity, practical skills, and community-focused learning more effectively address real-world problems than traditional rote education.",
-    image: "https://i.ibb.co/P816TbB/F-1.jpg"
+    image: "https://images.unsplash.com/photo-1559027615-cd7d730ee0bb?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "challenge5",
@@ -106,7 +106,7 @@ export const CHALLENGES: Challenge[] = [
     date: "E-LAB Challenge 06",
     description: "Challenge 6 is where everything came together. Having to bring our solution to life and see the lines on the white board transform into wireframes and interfaces, we had to build our prototype. We were also required to build a website which highlighted our E-Lab journey so far. Going down memory lane, and reflecting on how much we have each learnt, grown and contributed to this journey was in fact the highlight of this challenge.",
     impact: "Our creativity also came to life as we decided on colour palettes, button positioning, functionality and experience. Challenge 6 showed us the importance of reflection and documenting in building.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+    image: "https://i.ibb.co/rRrX6GbR/J-1.jpg"
   }
 ];
 
