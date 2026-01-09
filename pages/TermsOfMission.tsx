@@ -3,7 +3,7 @@ import React from 'react';
 
 const TermsOfMission: React.FC = () => {
   return (
-    <div className="pt-32 pb-24 bg-slate-100 dark:bg-slate-950 min-h-screen transition-colors duration-300">
+    <div className="pt-32 pb-24 bg-slate-300 dark:bg-slate-950 min-h-screen transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         <header className="mb-16 text-left">
           <h2 className="text-blue-600 font-black uppercase tracking-[0.2em] text-[10px] mb-4">Operational Guidelines</h2>
@@ -13,7 +13,7 @@ const TermsOfMission: React.FC = () => {
           <div className="w-20 h-1.5 bg-blue-600 rounded-full"></div>
         </header>
 
-        <div className="prose prose-blue max-w-none text-slate-600 dark:text-gray-400 font-medium leading-relaxed space-y-8">
+        <div className="prose prose-blue max-w-none text-slate-800 dark:text-gray-400 font-medium leading-relaxed space-y-8">
           <section>
             <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">1. Scope of Participation</h3>
             <p>
@@ -42,7 +42,7 @@ const TermsOfMission: React.FC = () => {
             </p>
           </section>
 
-          <div className="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 text-sm text-slate-400">
+          <div className="mt-16 pt-8 border-t border-slate-400 dark:border-slate-800 text-sm text-slate-500 font-bold">
             Last Updated: February 2025 | Mission Code: GENESIS-BUEA-ALPHA
           </div>
         </div>

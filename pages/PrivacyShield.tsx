@@ -3,7 +3,7 @@ import React from 'react';
 
 const PrivacyShield: React.FC = () => {
   return (
-    <div className="pt-32 pb-24 bg-slate-100 dark:bg-slate-950 min-h-screen transition-colors duration-300">
+    <div className="pt-32 pb-24 bg-slate-300 dark:bg-slate-950 min-h-screen transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         <header className="mb-16">
           <h2 className="text-blue-600 font-black uppercase tracking-[0.2em] text-[10px] mb-4 text-left">Legal Framework</h2>
@@ -13,7 +13,7 @@ const PrivacyShield: React.FC = () => {
           <div className="w-20 h-1.5 bg-blue-600 rounded-full"></div>
         </header>
 
-        <div className="prose prose-blue max-w-none text-slate-600 dark:text-gray-400 font-medium leading-relaxed space-y-8">
+        <div className="prose prose-blue max-w-none text-slate-800 dark:text-gray-400 font-medium leading-relaxed space-y-8">
           <section>
             <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">Mission Integrity & Data Ethics</h3>
             <p>
@@ -40,7 +40,7 @@ const PrivacyShield: React.FC = () => {
             </p>
           </section>
 
-          <section className="bg-white/80 dark:bg-slate-900 p-8 rounded-[40px] border border-slate-200 dark:border-slate-800 mt-12 shadow-sm">
+          <section className="bg-slate-100/80 dark:bg-slate-900 p-8 rounded-[40px] border border-slate-400 dark:border-slate-800 mt-12 shadow-sm">
             <h4 className="text-slate-950 dark:text-white font-black mb-2">Transparency Note</h4>
             <p className="text-sm italic">
               "We believe that students should own their progress. At any point, a participant can request a full audit of the skill verification data stored under their unique Mission ID." — Team S.C.A.A.M Legal Dept.
