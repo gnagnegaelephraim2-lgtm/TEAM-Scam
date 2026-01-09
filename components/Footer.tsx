@@ -50,8 +50,8 @@ const Footer: React.FC = () => {
             <div>
               <h4 className="text-[11px] font-black uppercase tracking-[0.3em] mb-8 text-blue-500">Navigation</h4>
               <ul className="space-y-5 text-gray-400 font-bold text-sm">
-                <li><Link to="/" className="hover:text-white transition-colors">Strategic Home</Link></li>
-                <li><Link to="/challenges" className="hover:text-white transition-colors">The eLab Roadmap</Link></li>
+                <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
+                <li><Link to="/challenges" className="hover:text-white transition-colors">Challenges</Link></li>
                 <li><Link to="/reviews" className="hover:text-white transition-colors">Our Story</Link></li>
                 <li><Link to="/reflections" className="hover:text-white transition-colors">Reflections</Link></li>
               </ul>
