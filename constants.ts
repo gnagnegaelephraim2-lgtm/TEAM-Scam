@@ -1,4 +1,3 @@
-
 import { TeamMember, Challenge, VideoItem } from './types';
 
 export const SOCIALS = {
@@ -98,7 +97,7 @@ export const CHALLENGES: Challenge[] = [
     date: "E-LAB Challenge 05",
     description: "Challenge 5 was based on our team’s mission, the problem we had identified, and our research. This was our opportunity to launch a solution to the problem we had found. We were to come up with a compelling application for our project that could earn us a grant of up to $10,000 USD. We had to make a business proposal and a video pitching our solution and explaining why we needed the money. This challenge pushed us into hours of brainstorming and iteration. We had to utilize everything we had learned so far and the data we had collected to come up with an innovative solution. We pushed back, made changes, and came up with our project, Mission Genesis.",
     impact: "We also had to use our storytelling skills to create a compelling pitch and proposal. This challenge brought us closer as a team as we gained a deeper understanding of the intricacies of solution development.",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=800"
+    image: "https://i.ibb.co/XfdBfvKP/S-C-9.jpg"
   },
   {
     id: "challenge6",
