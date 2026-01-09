@@ -207,7 +207,7 @@ const DataHub: React.FC = () => {
                  </div>
                  
                  <div className="h-32 bg-white/[0.02] border border-white/5 rounded-2xl p-4 font-mono text-[10px] text-emerald-500 overflow-y-auto space-y-1 text-left">
-                    <p className="opacity-50 tracking-widest">>> RUNNING STRESS ANALYSIS...</p>
+                    <p className="opacity-50 tracking-widest">{"»» RUNNING STRESS ANALYSIS..."}</p>
                     <p>VERIFYING VECTOR: FORCE_X = 142.5kN</p>
                     <p>VERIFYING VECTOR: FORCE_Y = 289.1kN</p>
                     <p className="text-yellow-500">WARNING: ANOMALY DETECTED IN STRUCTURAL_ANCHOR</p>
