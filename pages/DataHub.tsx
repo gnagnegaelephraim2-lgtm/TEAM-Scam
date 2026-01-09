@@ -254,25 +254,29 @@ const DataHub: React.FC = () => {
       )}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 animate-fade-in">
+        <div className="flex flex-col md:flex-row md:items-center justify-start mb-12 gap-8 animate-fade-in">
           <div className="text-left">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-blue-600/10 border border-blue-500/20 rounded-full mb-4">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-blue-600/10 border border-blue-500/20 rounded-full mb-6">
               <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
               <span className="text-[10px] font-black text-blue-500 uppercase tracking-widest">Active Node: GENESIS-BUEA-ALPHA</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-black tracking-tighter text-white uppercase text-left leading-none">
-              GENESIS <span className="text-blue-500">DATA HUB</span>
-            </h1>
+            <div className="inline-block border-2 border-dashed border-blue-500/40 rounded-3xl p-8 mb-4">
+              <h1 className="text-4xl md:text-7xl font-black tracking-tighter text-white uppercase text-left leading-[0.9]">
+                MISSION<br/>
+                GENESIS <span className="text-blue-500">DATA HUB</span>
+              </h1>
+              <p className="text-[9px] font-bold text-blue-400 uppercase tracking-[0.4em] mt-4 opacity-60">Mission Genesis Data Hub</p>
+            </div>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-            <div className="text-right border-r border-white/10 pr-4 md:pr-8">
+          <div className="flex flex-wrap gap-12 ml-4">
+            <div className="text-left border-l-2 border-white/10 pl-8">
               <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">System Uptime</p>
-              <p className="font-mono text-xl font-bold text-blue-500">{systemUptime}</p>
+              <p className="font-mono text-3xl font-bold text-blue-500">{systemUptime}</p>
             </div>
-            <div className="text-right">
+            <div className="text-left border-l-2 border-white/10 pl-8">
               <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">Data Accuracy</p>
-              <p className="font-mono text-xl font-bold text-emerald-500">98.4%</p>
+              <p className="font-mono text-3xl font-bold text-emerald-500">98.4%</p>
             </div>
           </div>
         </div>

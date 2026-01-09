@@ -66,7 +66,7 @@ export const CHALLENGES: Challenge[] = [
     date: "E-LAB Challenge 01",
     description: "E-LAB challenge 1 was about introductions. We got to know ourselves as a team, the G.C.G.O we chose to focus on and why we decided to tackle that challenge. Our team made a video that introduced each team member, and each one of us talked about who we are, what drives us, as well as an interesting fact about ourselves.",
     impact: "We got to know each group member better and get familiar with each other. We also got a chance to get comfortable speaking in front of a camera and planning for our videos. This was also the first challenge where we got to work in our different roles and better understand our team dynamic.",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
+    image: "https://i.ibb.co/yFvhwTtr/S-M-2.jpg"
   },
   {
     id: "challenge2",
@@ -74,7 +74,7 @@ export const CHALLENGES: Challenge[] = [
     date: "E-LAB Challenge 02",
     description: "E-LAB challenge 2 was about the power of telling our own stories. For this challenge we were to exercise our skills in storytelling, creative, critical, and radical thinking. Our team spoke about the ongoing Anglophone crisis in Cameroon. We talked about the Kumbo school kidnapping, Monday Ghost towns, and the Ebam mass assault. We also spoke about the strength of the English speaking region and how they still thrive regardless of the issues.",
     impact: "We also learned that storytelling is a powerful tool to give voice and shine a light into real world problems, build empathy, and to challenge the silence around injustice.",
-    image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=80&w=1200"
+    image: "https://i.ibb.co/6cZ25Nky/S-A-2.jpg"
   },
   {
     id: "challenge3",
