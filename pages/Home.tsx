@@ -1,10 +1,31 @@
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import VideoGrid from '../components/VideoGrid';
 import { TEAM_MEMBERS } from '../constants';
 
 const Home: React.FC = () => {
+  const [teamVisible, setTeamVisible] = useState(false);
+  const teamSectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTeamVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (teamSectionRef.current) {
+      observer.observe(teamSectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     const target = e.target as HTMLImageElement;
     target.src = "https://i.ibb.co/b5cSGrnw/Pic4.jpg";
@@ -202,7 +223,7 @@ const Home: React.FC = () => {
       <VideoGrid />
 
       {/* Team Section */}
-      <section className="py-24 bg-white dark:bg-black text-left transition-colors duration-300 relative">
+      <section ref={teamSectionRef} className="py-24 bg-white dark:bg-black text-left transition-colors duration-300 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
             <div className="text-left">
@@ -216,8 +237,16 @@ const Home: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">
-            {TEAM_MEMBERS.map(member => (
-              <div key={member.id} className="group text-center">
+            {TEAM_MEMBERS.map((member, index) => (
+              <div 
+                key={member.id} 
+                className={`group text-center transition-all duration-1000 ease-out transform ${
+                  teamVisible 
+                    ? 'opacity-100 translate-y-0 scale-100' 
+                    : 'opacity-0 translate-y-12 scale-90'
+                }`}
+                style={{ transitionDelay: `${index * 150}ms` }}
+              >
                 <div className="relative aspect-square max-w-[180px] mx-auto rounded-[32px] overflow-hidden mb-6 border-4 border-slate-50 dark:border-slate-900 shadow-lg">
                   <img 
                     src={member.image} 
