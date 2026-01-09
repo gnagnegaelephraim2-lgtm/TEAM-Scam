@@ -11,10 +11,10 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen transition-colors duration-300 bg-slate-300 dark:bg-slate-950">
+    <div className="min-h-screen transition-colors duration-300 bg-slate-50 dark:bg-slate-950">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden hero-pattern">
-        <div className="absolute inset-0 z-0 opacity-[0.08] dark:opacity-[0.1] grayscale pointer-events-none">
+        <div className="absolute inset-0 z-0 opacity-[0.4] dark:opacity-[0.1] grayscale pointer-events-none">
           <img 
             src="https://i.ibb.co/GvgnFhMG/Pic2.jpg" 
             className="w-full h-full object-cover" 
@@ -22,15 +22,15 @@ const Home: React.FC = () => {
           />
         </div>
 
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-400/20 dark:bg-blue-900/20 rounded-full blur-[120px] opacity-40 -mr-48 -mt-48 animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-400/20 dark:bg-indigo-900/20 rounded-full blur-[100px] opacity-30 -ml-24 -mb-24"></div>
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/40 dark:bg-blue-900/20 rounded-full blur-[120px] opacity-40 -mr-48 -mt-48 animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-100/40 dark:bg-indigo-900/20 rounded-full blur-[100px] opacity-30 -ml-24 -mb-24"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-7 text-left">
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-slate-400/50 dark:bg-blue-900/30 border border-slate-500/30 dark:border-blue-800/50 rounded-full mb-8 animate-fade-in shadow-sm">
+              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white dark:bg-blue-900/30 border border-slate-200 dark:border-blue-800/50 rounded-full mb-8 animate-fade-in shadow-sm">
                 <span className="w-2.5 h-2.5 bg-blue-600 rounded-full animate-ping"></span>
-                <span className="text-[10px] font-black text-slate-900 dark:text-blue-300 uppercase tracking-[0.2em]">S.C.A.A.M Impact</span>
+                <span className="text-[10px] font-black text-slate-600 dark:text-blue-300 uppercase tracking-[0.2em]">S.C.A.A.M Impact</span>
               </div>
               
               <div className="mb-8">
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
                 </h1>
               </div>
               
-              <p className="text-xl md:text-2xl text-slate-800 dark:text-gray-400 mb-12 leading-relaxed max-w-xl font-medium text-left">
+              <p className="text-xl md:text-2xl text-slate-600 dark:text-gray-400 mb-12 leading-relaxed max-w-xl font-medium text-left">
                 Equipping students with the knowledge, skills, and mindset to become active, innovative contributors to society.
               </p>
               
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
 
                 <Link 
                   to="/reviews" 
-                  className="bg-slate-50/90 dark:bg-slate-800/70 backdrop-blur-xl text-slate-900 dark:text-white px-10 py-5 rounded-[24px] text-[13px] font-black uppercase tracking-widest shadow-lg hover:bg-white dark:hover:bg-slate-700 transition-all text-center border border-slate-400 active:scale-95"
+                  className="bg-white dark:bg-slate-800/70 backdrop-blur-xl text-slate-900 dark:text-white px-10 py-5 rounded-[24px] text-[13px] font-black uppercase tracking-widest shadow-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-all text-center border border-slate-200 active:scale-95"
                 >
                   Our Story
                 </Link>
@@ -68,7 +68,7 @@ const Home: React.FC = () => {
             
             <div className="lg:col-span-5 relative hidden lg:block">
               <div className="relative">
-                <div className="relative w-full max-w-[450px] mx-auto aspect-[4/5] rounded-[48px] overflow-hidden border-[12px] border-slate-200 dark:border-slate-800 shadow-2xl ring-1 ring-slate-400 dark:ring-slate-700 transform rotate-2">
+                <div className="relative w-full max-w-[450px] mx-auto aspect-[4/5] rounded-[48px] overflow-hidden border-[12px] border-white dark:border-slate-800 shadow-2xl ring-1 ring-slate-100 dark:ring-slate-700 transform rotate-2">
                   <img 
                     src="https://i.ibb.co/svFD3GyR/Whats-App-Image-2026-01-07-at-4-50-45-PM-4.jpg" 
                     alt="Team collaboration" 
@@ -131,12 +131,12 @@ const Home: React.FC = () => {
       </section>
 
       {/* Mission Statement Section */}
-      <section id="mission-statement-info" className="py-24 bg-slate-400/20 dark:bg-slate-900/50 text-left transition-colors duration-300">
+      <section id="mission-statement-info" className="py-24 bg-white dark:bg-slate-900/50 text-left transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl text-left">
              <h2 className="text-blue-600 font-black uppercase tracking-[0.3em] text-[10px] mb-8 text-left">Mission Statement</h2>
              <div className="space-y-8">
-               <p className="text-slate-800 dark:text-gray-400 text-lg md:text-xl font-medium leading-relaxed max-w-4xl">
+               <p className="text-slate-600 dark:text-gray-400 text-lg md:text-xl font-medium leading-relaxed max-w-4xl">
                   Our mission is to provide relevant quality education for secondary school students in <span className="text-blue-600">Cameroon</span>, equipping them with the knowledge, skills, and mindset to become active, innovative contributors to society.
                </p>
              </div>
@@ -188,7 +188,7 @@ const Home: React.FC = () => {
       <VideoGrid />
 
       {/* Team Section */}
-      <section className="py-24 bg-slate-300 dark:bg-black text-left transition-colors duration-300 relative">
+      <section className="py-24 bg-white dark:bg-black text-left transition-colors duration-300 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
             <div className="text-left">
@@ -196,7 +196,7 @@ const Home: React.FC = () => {
                 Our <span className="bg-blue-600 text-white px-5 py-2 rounded-lg shadow-xl inline-block ml-1">Team</span>
               </h3>
             </div>
-            <Link to="/reviews" className="px-10 py-5 bg-slate-400/50 dark:bg-slate-900 text-slate-900 dark:text-white font-black text-[13px] uppercase tracking-[0.2em] rounded-2xl hover:bg-blue-600 hover:text-white transition-all shadow-xl active:scale-95 border border-slate-500/30 dark:border-white/5">
+            <Link to="/reviews" className="px-10 py-5 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white font-black text-[13px] uppercase tracking-[0.2em] rounded-2xl hover:bg-blue-600 hover:text-white transition-all shadow-xl active:scale-95 border border-slate-200 dark:border-white/5">
               Our Story
             </Link>
           </div>
@@ -204,7 +204,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">
             {TEAM_MEMBERS.map(member => (
               <div key={member.id} className="group text-center">
-                <div className="relative aspect-square max-w-[180px] mx-auto rounded-[32px] overflow-hidden mb-6 border-4 border-slate-100 dark:border-slate-900 shadow-lg">
+                <div className="relative aspect-square max-w-[180px] mx-auto rounded-[32px] overflow-hidden mb-6 border-4 border-slate-50 dark:border-slate-900 shadow-lg">
                   <img 
                     src={member.image} 
                     alt={member.name} 

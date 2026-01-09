@@ -25,7 +25,7 @@ const Reflections: React.FC = () => {
   };
 
   return (
-    <div className="pt-32 pb-24 bg-slate-300 dark:bg-slate-950 transition-colors duration-300 min-h-screen">
+    <div className="pt-32 pb-24 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="mb-24 text-left border-l-4 border-blue-600 pl-8 relative">
            <div className="absolute top-0 right-0 opacity-10 hidden lg:block">
@@ -35,14 +35,14 @@ const Reflections: React.FC = () => {
           <h1 className="text-4xl md:text-7xl font-black text-slate-900 dark:text-white mb-6 tracking-tighter">
             E_lab<span className="bg-blue-600 text-white px-4 rounded-xl inline-block transform -rotate-1">Reflections</span>
           </h1>
-          <p className="text-lg text-slate-800 dark:text-gray-400 leading-relaxed max-w-2xl font-medium">
+          <p className="text-lg text-slate-600 dark:text-gray-400 leading-relaxed max-w-2xl font-medium">
             Internal debriefs from the Team S.C.A.A.M think-tank. These personal journals document the psychological and operational shifts experienced during the Mission Genesis lifecycle.
           </p>
         </header>
 
         <div className="space-y-24 relative">
           {/* Timeline Connector */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-slate-400 dark:bg-slate-800 hidden lg:block -translate-x-1/2"></div>
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 dark:bg-slate-800 hidden lg:block -translate-x-1/2"></div>
 
           {TEAM_MEMBERS.map((member, index) => {
              const isEven = index % 2 === 0;
@@ -55,7 +55,7 @@ const Reflections: React.FC = () => {
                >
                  {/* Journal Entry Card */}
                  <div className="w-full lg:w-3/5 group">
-                   <div className="relative p-10 md:p-14 bg-slate-100/90 dark:bg-slate-900 border border-slate-400 dark:border-slate-800 rounded-[50px] shadow-sm group-hover:shadow-2xl transition-all duration-700 overflow-hidden backdrop-blur-sm">
+                   <div className="relative p-10 md:p-14 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[50px] shadow-sm group-hover:shadow-2xl transition-all duration-700 overflow-hidden backdrop-blur-sm">
                       {/* Quote Mark Decoration */}
                       <div className="absolute top-0 right-0 p-12 opacity-[0.03] dark:opacity-[0.05] pointer-events-none">
                          <i className="fas fa-quote-right text-[120px] text-blue-600"></i>
@@ -71,9 +71,9 @@ const Reflections: React.FC = () => {
                           "{journalText}"
                         </div>
 
-                        <div className="pt-10 border-t border-slate-200 dark:border-slate-800/50 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+                        <div className="pt-10 border-t border-slate-100 dark:border-slate-800/50 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
                            <div>
-                              <h4 className="text-[10px] font-black text-slate-600 dark:text-gray-500 uppercase tracking-widest mb-1">Functional Contribution</h4>
+                              <h4 className="text-[10px] font-black text-slate-500 dark:text-gray-500 uppercase tracking-widest mb-1">Functional Contribution</h4>
                               <p className="text-sm font-bold text-slate-900 dark:text-white">{member.contribution}</p>
                            </div>
                            <div className="shrink-0 flex items-center space-x-2">
@@ -89,7 +89,7 @@ const Reflections: React.FC = () => {
                  <div className="w-full lg:w-2/5 flex flex-col items-center lg:items-start text-center lg:text-left">
                    <div className="relative mb-8">
                      <div className="absolute -inset-4 bg-blue-600/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                     <div className="relative w-32 h-32 md:w-48 md:h-48 rounded-[40px] overflow-hidden border-8 border-slate-200 dark:border-slate-800 shadow-2xl transform group-hover:rotate-3 transition-transform duration-500">
+                     <div className="relative w-32 h-32 md:w-48 md:h-48 rounded-[40px] overflow-hidden border-8 border-white dark:border-slate-800 shadow-2xl transform group-hover:rotate-3 transition-transform duration-500">
                         <img 
                           src={member.image} 
                           alt={member.name} 
@@ -101,12 +101,12 @@ const Reflections: React.FC = () => {
                    <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-2 tracking-tighter">{member.name}</h3>
                    <div className="flex flex-col gap-1">
                       <span className="text-blue-600 font-black uppercase tracking-widest text-xs">{member.role}</span>
-                      <span className="text-[10px] font-bold text-slate-600 dark:text-gray-500 uppercase tracking-widest">{member.country}</span>
+                      <span className="text-[10px] font-bold text-slate-500 dark:text-gray-500 uppercase tracking-widest">{member.country}</span>
                    </div>
                  </div>
 
                  {/* Desktop Center Dot */}
-                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-slate-300 dark:border-slate-950 shadow-lg hidden lg:block z-20"></div>
+                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white dark:border-slate-950 shadow-lg hidden lg:block z-20"></div>
                </div>
              );
           })}
