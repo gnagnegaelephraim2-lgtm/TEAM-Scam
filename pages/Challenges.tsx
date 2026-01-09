@@ -17,7 +17,7 @@ const Challenges: React.FC = () => {
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     const target = e.target as HTMLImageElement;
-    target.src = "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=800";
+    target.src = "https://i.ibb.co/LXcbQL8S/Pic1.jpg";
   };
 
   return (

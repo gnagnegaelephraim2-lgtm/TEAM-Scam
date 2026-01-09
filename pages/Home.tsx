@@ -7,7 +7,7 @@ import { TEAM_MEMBERS } from '../constants';
 const Home: React.FC = () => {
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     const target = e.target as HTMLImageElement;
-    target.src = "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800";
+    target.src = "https://i.ibb.co/b5cSGrnw/Pic4.jpg";
   };
 
   return (
@@ -16,7 +16,7 @@ const Home: React.FC = () => {
       <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden hero-pattern">
         <div className="absolute inset-0 z-0 opacity-[0.05] dark:opacity-[0.1] grayscale pointer-events-none">
           <img 
-            src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=2000" 
+            src="https://i.ibb.co/GvgnFhMG/Pic2.jpg" 
             className="w-full h-full object-cover" 
             alt="Technical Schematic Background"
           />
@@ -70,16 +70,13 @@ const Home: React.FC = () => {
               <div className="relative">
                 <div className="relative w-full max-w-[450px] mx-auto aspect-[4/5] rounded-[48px] overflow-hidden border-[12px] border-white dark:border-slate-800 shadow-2xl ring-1 ring-slate-100 dark:ring-slate-700 transform rotate-2">
                   <img 
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" 
-                    alt="Students collaborating" 
+                    src="https://i.ibb.co/svFD3GyR/Whats-App-Image-2026-01-07-at-4-50-45-PM-4.jpg" 
+                    alt="Team collaboration" 
                     className="w-full h-full object-cover transition-transform duration-[2.5s] hover:scale-105"
                     onError={handleImageError}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-6 left-6 right-6 p-6 bg-white/10 dark:bg-black/20 backdrop-blur-md rounded-2xl border border-white/20">
-                     <p className="text-xs font-black text-white uppercase tracking-widest mb-1">Team S.C.A.A.M Alpha</p>
-                     <p className="text-sm text-white/80 font-medium">Applied Logic Verification</p>
-                  </div>
+                  {/* Caption overlay removed per user request */}
                 </div>
 
                 {/* Floating Action Button */}

@@ -370,14 +370,16 @@ const DataHub: React.FC = () => {
                 <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
                   <i className="fas fa-bolt text-2xl text-white"></i>
                 </div>
-                <h4 className="text-lg font-black text-white mb-2 uppercase tracking-tighter">NATIONAL SKILL AUDIT TERMINAL</h4>
-                <p className="text-xs text-white/70 mb-8 font-bold uppercase tracking-widest leading-relaxed">MEASURE HIGHER-ORDER THINKING SKILLS AND VALIDATE STUDENT COMPETENCIES THROUGH REAL-WORLD MISSION SIMULATIONS.</p>
-                <button 
-                  onClick={handleLaunchModule}
-                  className="w-full py-4 bg-white text-blue-600 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] hover:bg-gray-100 transition-all active:scale-95 shadow-xl"
+                <h4 className="text-sm font-black text-white mb-6 uppercase tracking-tighter opacity-80">MISSION GENESIS</h4>
+                <p className="text-xs text-white/70 mb-8 font-bold uppercase tracking-widest leading-relaxed">AN IMMERSIVE ECOSYSTEM TRANSFORMING EDUCATION IN CAMEROON BY SHIFTING FROM ROTE MEMORIZATION TO ACTIVE, APPLIED INNOVATION THROUGH REAL-WORLD LOGIC MISSIONS.</p>
+                <a 
+                  href="https://mission-genesis.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-4 bg-white text-blue-600 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] hover:bg-gray-100 transition-all active:scale-95 shadow-xl block text-center"
                 >
-                  Launch Command
-                </button>
+                  Launch APP
+                </a>
               </div>
             </div>
           </div>

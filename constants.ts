@@ -14,7 +14,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     country: "Côte d'Ivoire",
     contribution: "Spearheaded the end-to-end technical architecture of the Mission Genesis ecosystem. This included designing a modular React-based frontend for the 'Mission Terminal' and integrating a real-time analytics engine.",
     reflection: "Building Mission Genesis taught me that technical excellence is secondary to social relevance. In the context of Cameroon, we weren't just writing code; we were building a bridge for students to cross from the limitations of the 1960s educational reforms into the 21st-century digital economy.",
-    journal: "I entered E-Lab with a strong resistance to group work. Past experiences had shaped my belief that collaboration often meant inefficiency, emotional strain, and carrying the weight of others’ shortcomings. I expected group work to be more draining than productive.\n\nAt the beginning, teamwork felt easy. Everyone was motivated, present, and contributing. However, as the workload increased and fatigue set in, that initial momentum faded. This was the moment where leadership became necessary. I found myself stepping forward not out of ambition, but out of responsibility. When others slowed down, I became the constant, prioritizing the success of the project even when it was uncomfortable.\n\nThrough this experience, my perception of teamwork shifted. Implementing group norms improved accountability, and redistributing tasks allowed everyone the space to contribute meaningfully. I learned when to give people room to grow and when to step in to protect the quality of the work. I also observed the bystander effect and realized that initiative often needs to be modeled before others follow.\n\nMost importantly, E-Lab taught me that leadership is not about doing more than everyone else, but about enabling others to lead. What I once understood only in theory became practical. This experience reshaped my understanding of teamwork and leadership, and for that, I am grateful.",
+    journal: "I entered E-Lab with a strong resistance to group work. Past experiences had shaped my belief that collaboration often led to inefficiency, emotional strain, and the burden of compensating for others’ shortcomings. I expected group work to be more draining than productive.\n\nAt the beginning, teamwork felt easy. Everyone was motivated, present, and contributing. However, as the workload increased and fatigue set in, that initial momentum began to fade. This was the point at which leadership became necessary. I stepped forward not out of ambition, but out of responsibility. When others slowed down, I became the constant, prioritizing the success of the project even when it was uncomfortable.\n\nIn practice, this meant taking ownership of key deliverables. I led the technical execution by building both the website and the prototype, while guiding the team through the process to ensure alignment with our vision and objectives. Rather than working in isolation, I used these moments to set direction, create structure, and support my teammates in contributing meaningfully within their strengths.\n\nThrough this experience, my perception of teamwork shifted. Implementing group norms improved accountability, and redistributing tasks allowed everyone the space to contribute effectively. I learned when to give people room to grow and when to step in to protect the quality and coherence of the work. I also observed the bystander effect firsthand and realized that initiative often needs to be modeled before others feel empowered to act.\n\nMost importantly, E-Lab taught me that leadership is not about doing more than everyone else, but about enabling others to lead. What I once understood only in theory became practical. This experience reshaped my understanding of teamwork and leadership, and for that, I am grateful.",
     image: "https://i.ibb.co/wrL7k8r1/Chrys.jpg"
   },
   {
@@ -64,48 +64,48 @@ export const CHALLENGES: Challenge[] = [
     id: "challenge1",
     title: "Challenge 1: Introduction",
     date: "E-LAB Challenge 01",
-    description: "E-LAB challenge 1 was about introducing the team and each team member as well as the G.C.G.O we chose to focus on and why we decided to tackle that challenge.",
-    impact: "Our take aways from this challenge is that we got to know each group member better and get familiar with each other as well as we got a chance to get comfortable speaking in front of a camera as well as planning for our videos.",
+    description: "E-LAB challenge 1 was about introductions. We got to know ourselves as a team, the G.C.G.O we chose to focus on and why we decided to tackle that challenge. Our team made a video that introduced each team member, and each one of us talked about who we are, what drives us, as well as an interesting fact about ourselves.",
+    impact: "We got to know each group member better and get familiar with each other. We also got a chance to get comfortable speaking in front of a camera and planning for our videos. This was also the first challenge where we got to work in our different roles and better understand our team dynamic.",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "challenge2",
     title: "Challenge 2: Discover Africa",
     date: "E-LAB Challenge 02",
-    description: "E-LAB challenge 2 was about the power of telling our own stories. For this challenge we were to exercise our skills in storytelling, creative, critical, and radical thinking.",
-    impact: "A key take away from this challenge is that we learned that storytelling is a powerful tool to give voice and shine a light into real world problems, built empathy, and to challenge the silence around injustice.",
+    description: "E-LAB challenge 2 was about the power of telling our own stories. For this challenge we were to exercise our skills in storytelling, creative, critical, and radical thinking. Our team spoke about the ongoing Anglophone crisis in Cameroon. We talked about the Kumbo school kidnapping, Monday Ghost towns, and the Ebam mass assault. We also spoke about the strength of the English speaking region and how they still thrive regardless of the issues.",
+    impact: "We also learned that storytelling is a powerful tool to give voice and shine a light into real world problems, build empathy, and to challenge the silence around injustice.",
     image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=80&w=1200"
   },
   {
     id: "challenge3",
     title: "Challenge 3: Help Lab",
     date: "E-LAB Challenge 03",
-    description: "E-LAB challenge 3 was focused on community service and serving a community of our choice. We chose to help at a church event called ‘Living Word’.",
-    impact: "A key take away from this challenge is that community service doesn’t always mean doing something big, simply showing up and supporting others as well as being a helping hand.",
+    description: "E-LAB challenge 3 was focused on community service. We chose to volunteer at the Living word community beach Braai. It was a day of bonding, wellness and sharing. The Braai happened at the Mon Choisy beach. We mainly helped with setting up, serving food, taking care of some kids and engaging with the people to ensure everyone was having fun and had a pair of helping hands when it was needed.",
+    impact: "We were also in charge of helping clean up and taking the trash out. We learnt that community service doesn’t always mean doing something big, simply showing up and supporting others as well as being a helping hand.",
     image: "https://images.unsplash.com/photo-1559027615-cd7d730ee0bb?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "challenge4",
     title: "Challenge 4: Hunt for Treasure",
     date: "E-LAB Challenge 04",
-    description: "E-LAB challenge 4 was about us putting in practice our researching skills, systems thinking, and human-centered design by interviewing Mr. Teh Allen Kuma of Knowledge Centre.",
-    impact: "Real impact come from human-centered solutions like, Knowledge Centre showing how, creativity, practical skills, and community-focused learning a better address real problems than traditional rote education.",
+    description: "E-LAB challenge 4 was about us putting in practice our research skills, systems thinking, and human-centered design. From the problem we are working on, we had to find an organization, whose operations falls under our chosen G.C.G.O, and we were to interview them to get to know their day-to-day operations, and what they are doing to combat their focused issue. We interviewed Mr. Teh Allen Kuma, CEO and President of Knowledge Center, Cameroon: an institution reimagining how African talent is discovered, trained, and launched onto the global stage.",
+    impact: "Unlike most schools in Cameroon, KC does not focus on rote memorization. Instead, it emphasizes human-centered solutions, demonstrating how creativity, practical skills, and community-focused learning more effectively address real-world problems than traditional rote education.",
     image: "https://images.unsplash.com/photo-1521791136064-7986c2923216?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "challenge5",
     title: "Challenge 5: Launch Your Mission",
     date: "E-LAB Challenge 05",
-    description: "Challenge 5 was about based on our team's mission, the problem we have identified and research. We pitched our solution for a $10,000 USD grant.",
-    impact: "Turning ideas into real solutions requires clear vision, strong planning, and the ability to communicate your impact convincingly to secure support and funding.",
+    description: "Challenge 5 was based on our team’s mission, the problem we had identified, and our research. This was our opportunity to launch a solution to the problem we had found. We were to come up with a compelling application for our project that could earn us a grant of up to $10,000 USD. We had to make a business proposal and a video pitching our solution and explaining why we needed the money. This challenge pushed us into hours of brainstorming and iteration. We had to utilize everything we had learned so far and the data we had collected to come up with an innovative solution. We pushed back, made changes, and came up with our project, Mission Genesis.",
+    impact: "We also had to use our storytelling skills to create a compelling pitch and proposal. This challenge brought us closer as a team as we gained a deeper understanding of the intricacies of solution development.",
     image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "challenge6",
     title: "Challenge 6: Digital Footprint",
     date: "E-LAB Challenge 06",
-    description: "Challenge 6 was about creating a website to showcase our E-Lab journey. We designed a website that represents our think tank and the people that make it.",
-    impact: "Presenting your work clearly and creatively is powerful, designing the website showed how visual design can bring our team’s journey and impact to life.",
+    description: "Challenge 6 is where everything came together. Having to bring our solution to life and see the lines on the white board transform into wireframes and interfaces, we had to build our prototype. We were also required to build a website which highlighted our E-Lab journey so far. Going down memory lane, and reflecting on how much we have each learnt, grown and contributed to this journey was in fact the highlight of this challenge.",
+    impact: "Our creativity also came to life as we decided on colour palettes, button positioning, functionality and experience. Challenge 6 showed us the importance of reflection and documenting in building.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
   }
 ];
@@ -145,5 +145,12 @@ export const VIDEOS: VideoItem[] = [
     url: "https://www.youtube.com/watch?v=jPwq5kixgLg",
     category: "Challenge 05",
     thumbnail: "https://img.youtube.com/vi/jPwq5kixgLg/maxresdefault.jpg"
+  },
+  {
+    id: "tDrVGoJoVWg",
+    title: "Digital Footprint & Launch",
+    url: "https://www.youtube.com/watch?v=tDrVGoJoVWg",
+    category: "Challenge 06",
+    thumbnail: "https://img.youtube.com/vi/tDrVGoJoVWg/maxresdefault.jpg"
   }
 ];
