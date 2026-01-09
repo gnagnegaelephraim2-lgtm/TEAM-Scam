@@ -76,10 +76,8 @@ const Home: React.FC = () => {
                     onError={handleImageError}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 via-transparent to-transparent"></div>
-                  {/* Caption overlay removed per user request */}
                 </div>
 
-                {/* Floating Action Button */}
                 <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-blue-600 rounded-3xl flex items-center justify-center text-white shadow-2xl animate-float z-20">
                   <i className="fas fa-microchip text-4xl"></i>
                 </div>
@@ -190,14 +188,15 @@ const Home: React.FC = () => {
       <VideoGrid />
 
       {/* Team Section */}
-      <section className="py-24 bg-slate-50/50 dark:bg-slate-900/30 text-left transition-colors duration-300">
+      <section className="py-24 bg-gray-950 dark:bg-black text-left transition-colors duration-300 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
+          <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
             <div className="text-left">
-              <h2 className="text-blue-600 font-black uppercase tracking-[0.3em] text-[10px] mb-4 text-left">Academic Think-Tank</h2>
-              <h3 className="text-4xl font-black text-gray-950 dark:text-white tracking-tight text-left">Our <span className="gradient-text">Team</span></h3>
+              <h3 className="text-5xl md:text-6xl font-black text-white tracking-tighter text-left">
+                Our <span className="bg-blue-600 text-white px-5 py-2 rounded-lg shadow-xl inline-block ml-1">Team</span>
+              </h3>
             </div>
-            <Link to="/reviews" className="px-8 py-4 bg-white dark:bg-slate-800 text-gray-950 dark:text-white font-black text-[11px] uppercase tracking-widest rounded-2xl border border-slate-200 dark:border-slate-700 hover:bg-blue-600 dark:hover:bg-blue-600 hover:text-white transition-all shadow-sm">
+            <Link to="/reviews" className="px-10 py-5 bg-slate-900 text-white font-black text-[13px] uppercase tracking-[0.2em] rounded-2xl hover:bg-blue-600 transition-all shadow-2xl active:scale-95 border border-white/5">
               Our Story
             </Link>
           </div>
@@ -205,7 +204,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">
             {TEAM_MEMBERS.map(member => (
               <div key={member.id} className="group text-center">
-                <div className="relative aspect-square max-w-[180px] mx-auto rounded-[32px] overflow-hidden mb-6 border-4 border-white dark:border-slate-800 shadow-lg">
+                <div className="relative aspect-square max-w-[180px] mx-auto rounded-[32px] overflow-hidden mb-6 border-4 border-slate-900 shadow-lg">
                   <img 
                     src={member.image} 
                     alt={member.name} 
@@ -214,7 +213,7 @@ const Home: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
-                <h5 className="text-sm font-black text-gray-950 dark:text-white leading-tight mb-1">{member.name}</h5>
+                <h5 className="text-sm font-black text-white leading-tight mb-1">{member.name}</h5>
                 <p className="text-[9px] font-bold text-blue-600 uppercase tracking-widest">{member.country}</p>
               </div>
             ))}
