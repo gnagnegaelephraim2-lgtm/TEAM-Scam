@@ -17,7 +17,7 @@ const PrivacyShield: React.FC = () => {
           <section>
             <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">Mission Integrity & Data Ethics</h3>
             <p>
-              Mission Genesis is committed to the highest standards of data ethics. As an innovation think-tank operating in Buea, Team S.C.A.A.M recognizes that student data is a sacred trust. Our Privacy Shield framework ensures that every piece of information collected—from competency metrics to simulation results—is used exclusively for pedagogical enhancement.
+              Mission Genesis is committed to the highest standards of data ethics. As an innovation think-tank operating in Buea, Team S.C.A.A.M recognizes that student data is a sacred trust. Our Privacy Shield framework ensures that every piece of information collected from competency metrics to simulation results is used exclusively for pedagogical enhancement.
             </p>
           </section>
 
