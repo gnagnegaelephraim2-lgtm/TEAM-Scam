@@ -8,12 +8,19 @@ const Home: React.FC = () => {
   const [teamVisible, setTeamVisible] = useState(false);
   const [text1, setText1] = useState('');
   const [text2, setText2] = useState('');
+  const [scrollY, setScrollY] = useState(0);
   const teamSectionRef = useRef<HTMLElement>(null);
 
   const fullText1 = "TEAM";
   const fullText2 = "S.C.A.A.M";
 
   useEffect(() => {
+    // Scroll listener for parallax effect
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
     // Typewriter animation logic
     let charIndex1 = 0;
     const type1 = setInterval(() => {
@@ -50,6 +57,7 @@ const Home: React.FC = () => {
     }
 
     return () => {
+      window.removeEventListener('scroll', handleScroll);
       clearInterval(type1);
       observer.disconnect();
     };
@@ -64,10 +72,14 @@ const Home: React.FC = () => {
     <div className="min-h-screen transition-colors duration-300 bg-white dark:bg-slate-950">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-24 pb-12 lg:pb-0 lg:pt-24 overflow-hidden hero-pattern">
-        <div className="absolute inset-0 z-0 opacity-[0.4] dark:opacity-[0.1] grayscale pointer-events-none">
+        {/* Parallax Background Layer */}
+        <div 
+          className="absolute inset-0 z-0 opacity-[0.4] dark:opacity-[0.1] grayscale pointer-events-none will-change-transform"
+          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+        >
           <img 
             src="https://i.ibb.co/GvgnFhMG/Pic2.jpg" 
-            className="w-full h-full object-cover" 
+            className="w-full h-full object-cover scale-110" 
             alt="Technical Schematic Background"
             decoding="async"
           />
