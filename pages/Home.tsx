@@ -77,15 +77,17 @@ const Home: React.FC = () => {
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-100/40 dark:bg-indigo-900/10 rounded-full blur-[100px] opacity-30 -ml-24 -mb-24"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <div className="lg:col-span-7 text-left order-2 lg:order-1">
+          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+            
+            {/* 1st Place: Impact Badge + Title Heading */}
+            <div className="w-full lg:col-span-7 order-1 text-left">
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white dark:bg-blue-900/30 border border-slate-200 dark:border-blue-800/50 rounded-full mb-8 animate-fade-in shadow-sm">
                 <span className="w-2.5 h-2.5 bg-blue-600 rounded-full animate-ping"></span>
                 <span className="text-[10px] font-black text-slate-600 dark:text-blue-300 uppercase tracking-[0.2em]">S.C.A.A.M Impact</span>
               </div>
               
-              <div className="mb-8 min-h-[120px] md:min-h-[180px] lg:min-h-[260px] flex flex-col justify-center">
-                <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[120px] font-black text-slate-900 dark:text-white leading-[0.85] tracking-tighter text-left uppercase mb-4 relative">
+              <div className="mb-4 lg:mb-8 min-h-[100px] md:min-h-[140px] lg:min-h-[260px] flex flex-col justify-center">
+                <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[120px] font-black text-slate-900 dark:text-white leading-[0.85] tracking-tighter text-left uppercase mb-2 lg:mb-4 relative">
                   {text1}
                   {text1.length > 0 && text1.length < fullText1.length && (
                     <span className="inline-block w-[4px] h-[0.8em] bg-blue-600 ml-2 animate-pulse align-middle"></span>
@@ -98,12 +100,35 @@ const Home: React.FC = () => {
                   )}
                 </h1>
               </div>
-              
-              <p className="text-lg md:text-xl lg:text-2xl text-slate-600 dark:text-gray-400 mb-12 leading-relaxed max-w-xl font-medium text-left">
+            </div>
+
+            {/* 2nd Place: Hero Image - Reordered for Mobile/Tablet to follow Title */}
+            <div className="w-full lg:col-span-5 order-2 relative py-4 lg:py-0">
+              <div className="relative">
+                <div className="relative w-full max-w-[280px] sm:max-w-[360px] lg:max-w-[450px] mx-auto aspect-[4/5] rounded-[32px] sm:rounded-[40px] lg:rounded-[48px] overflow-hidden border-[8px] lg:border-[12px] border-white dark:border-slate-800 shadow-2xl ring-1 ring-slate-100 dark:ring-slate-700 transform rotate-1 lg:rotate-2">
+                  <img 
+                    src="https://i.ibb.co/svFD3GyR/Whats-App-Image-2026-01-07-at-4-50-45-PM-4.jpg" 
+                    alt="Team collaboration" 
+                    className="w-full h-full object-cover transition-transform duration-[2.5s] hover:scale-105"
+                    onError={handleImageError}
+                    decoding="async"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 via-transparent to-transparent"></div>
+                </div>
+
+                <div className="absolute -bottom-3 -right-3 lg:-bottom-6 lg:-right-6 w-14 h-14 lg:w-24 lg:h-24 bg-blue-600 rounded-2xl lg:rounded-3xl flex items-center justify-center text-white shadow-2xl animate-float z-20">
+                  <i className="fas fa-microchip text-xl lg:text-4xl"></i>
+                </div>
+              </div>
+            </div>
+
+            {/* 3rd Place: Description Text + Buttons */}
+            <div className="w-full lg:col-span-7 lg:col-start-1 order-3 text-left">
+              <p className="text-lg md:text-xl lg:text-2xl text-slate-600 dark:text-gray-400 mb-10 lg:mb-12 leading-relaxed max-w-xl font-medium">
                 Equipping students with the knowledge, skills, and mindset to become active, innovative contributors to society.
               </p>
               
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 lg:gap-6">
                 <div className="relative group w-full sm:w-auto">
                   <Link 
                     to="/challenges" 
@@ -122,25 +147,7 @@ const Home: React.FC = () => {
                 </Link>
               </div>
             </div>
-            
-            <div className="lg:col-span-5 relative order-1 lg:order-2">
-              <div className="relative">
-                <div className="relative w-full max-w-[320px] sm:max-w-[450px] mx-auto aspect-[4/5] rounded-[40px] lg:rounded-[48px] overflow-hidden border-[8px] lg:border-[12px] border-white dark:border-slate-800 shadow-2xl ring-1 ring-slate-100 dark:ring-slate-700 transform rotate-2">
-                  <img 
-                    src="https://i.ibb.co/svFD3GyR/Whats-App-Image-2026-01-07-at-4-50-45-PM-4.jpg" 
-                    alt="Team collaboration" 
-                    className="w-full h-full object-cover transition-transform duration-[2.5s] hover:scale-105"
-                    onError={handleImageError}
-                    decoding="async"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 via-transparent to-transparent"></div>
-                </div>
 
-                <div className="absolute -bottom-4 -right-4 lg:-bottom-6 lg:-right-6 w-16 h-16 lg:w-24 lg:h-24 bg-blue-600 rounded-2xl lg:rounded-3xl flex items-center justify-center text-white shadow-2xl animate-float z-20">
-                  <i className="fas fa-microchip text-2xl lg:text-4xl"></i>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
