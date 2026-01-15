@@ -77,39 +77,39 @@ const Home: React.FC = () => {
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-100/40 dark:bg-indigo-900/10 rounded-full blur-[100px] opacity-30 -ml-24 -mb-24"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-16 items-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             
             {/* 1st Place: Title + Description (Ordered first on mobile) */}
-            <div className="w-full lg:col-span-7 order-1 text-left">
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white dark:bg-blue-900/30 border border-slate-200 dark:border-blue-800/50 rounded-full mb-6 lg:mb-8 animate-fade-in shadow-sm">
+            <div className="w-full lg:col-span-7 order-1 text-left flex flex-col">
+              <div className="inline-flex self-start items-center space-x-2 px-4 py-2 bg-white dark:bg-blue-900/30 border border-slate-200 dark:border-blue-800/50 rounded-full mb-6 lg:mb-8 animate-fade-in shadow-sm">
                 <span className="w-2.5 h-2.5 bg-blue-600 rounded-full animate-ping"></span>
                 <span className="text-[10px] font-black text-slate-600 dark:text-blue-300 uppercase tracking-[0.2em]">S.C.A.A.M Impact</span>
               </div>
               
-              <div className="mb-4 lg:mb-8 min-h-[80px] md:min-h-[140px] lg:min-h-[260px] flex flex-col justify-center">
-                <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[120px] font-black text-slate-900 dark:text-white leading-[0.85] tracking-tighter text-left uppercase mb-1 lg:mb-4 relative">
+              <div className="mb-4 lg:mb-8 min-h-[100px] md:min-h-[140px] lg:min-h-[260px] flex flex-col justify-center">
+                <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[120px] font-black text-slate-900 dark:text-white leading-[0.85] tracking-tighter text-left uppercase mb-1 lg:mb-4 relative">
                   {text1}
                   {text1.length > 0 && text1.length < fullText1.length && (
-                    <span className="inline-block w-[3px] lg:w-[4px] h-[0.8em] bg-blue-600 ml-2 animate-pulse align-middle"></span>
+                    <span className="inline-block w-[4px] lg:w-[6px] h-[0.8em] bg-blue-600 ml-2 animate-pulse align-middle"></span>
                   )}
                 </h1>
-                <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[120px] font-black text-blue-600 leading-[0.85] tracking-tighter text-left uppercase relative">
+                <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[120px] font-black text-blue-600 leading-[0.85] tracking-tighter text-left uppercase relative">
                   {text2}
                   {text2.length >= 0 && text1.length === fullText1.length && text2.length < fullText2.length && (
-                    <span className="inline-block w-[3px] lg:w-[4px] h-[0.8em] bg-slate-900 dark:bg-white ml-2 animate-pulse align-middle"></span>
+                    <span className="inline-block w-[4px] lg:w-[6px] h-[0.8em] bg-slate-900 dark:bg-white ml-2 animate-pulse align-middle"></span>
                   )}
                 </h1>
               </div>
 
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 dark:text-gray-400 mb-6 lg:mb-12 leading-relaxed max-w-xl font-medium text-left">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-slate-600 dark:text-gray-400 mb-8 lg:mb-12 leading-relaxed max-w-2xl font-medium text-left">
                 Equipping students with the knowledge, skills, and mindset to become active, innovative contributors to society.
               </p>
             </div>
 
             {/* 2nd Place: Hero Image (Ordered after text on mobile) */}
-            <div className="w-full lg:col-span-5 order-2 relative py-2 lg:py-0">
+            <div className="w-full lg:col-span-5 order-2 relative py-4 lg:py-0">
               <div className="relative">
-                <div className="relative w-full max-w-[240px] sm:max-w-[320px] lg:max-w-[450px] mx-auto aspect-[4/5] rounded-[24px] sm:rounded-[40px] lg:rounded-[48px] overflow-hidden border-[6px] lg:border-[12px] border-white dark:border-slate-800 shadow-2xl ring-1 ring-slate-100 dark:ring-slate-700 transform rotate-1 lg:rotate-2">
+                <div className="relative w-full max-w-[280px] sm:max-w-[360px] lg:max-w-[480px] mx-auto aspect-[4/5] rounded-[32px] sm:rounded-[40px] lg:rounded-[56px] overflow-hidden border-[6px] lg:border-[12px] border-white dark:border-slate-800 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)] ring-1 ring-slate-100 dark:ring-slate-700 transform rotate-1 lg:rotate-2">
                   <img 
                     src="https://i.ibb.co/svFD3GyR/Whats-App-Image-2026-01-07-at-4-50-45-PM-4.jpg" 
                     alt="Team collaboration" 
@@ -120,19 +120,19 @@ const Home: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 via-transparent to-transparent"></div>
                 </div>
 
-                <div className="absolute -bottom-2 -right-2 lg:-bottom-6 lg:-right-6 w-12 h-12 lg:w-24 lg:h-24 bg-blue-600 rounded-xl lg:rounded-3xl flex items-center justify-center text-white shadow-2xl animate-float z-20">
-                  <i className="fas fa-microchip text-lg lg:text-4xl"></i>
+                <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 lg:-bottom-8 lg:-right-8 w-12 h-12 sm:w-16 sm:h-16 lg:w-28 lg:h-28 bg-blue-600 rounded-2xl lg:rounded-[32px] flex items-center justify-center text-white shadow-2xl animate-float z-20">
+                  <i className="fas fa-microchip text-xl sm:text-2xl lg:text-5xl"></i>
                 </div>
               </div>
             </div>
 
             {/* 3rd Place: CTA Buttons (Final order on mobile) */}
-            <div className="w-full lg:col-span-7 lg:col-start-1 order-3 text-left mt-4 lg:mt-0">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 lg:gap-6">
+            <div className="w-full lg:col-span-12 order-3 text-left mt-8 lg:mt-0">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-5 lg:gap-8">
                 <div className="relative group w-full sm:w-auto">
                   <Link 
                     to="/challenges" 
-                    className="group relative bg-slate-900 dark:bg-black text-white px-8 lg:px-10 py-4 lg:py-5 rounded-[20px] lg:rounded-[24px] text-[12px] lg:text-[13px] font-black uppercase tracking-widest shadow-2xl hover:bg-blue-600 transition-all flex items-center justify-center space-x-3 active:scale-95 z-10"
+                    className="group relative bg-slate-900 dark:bg-black text-white px-10 py-5 rounded-[24px] text-[13px] font-black uppercase tracking-widest shadow-2xl hover:bg-blue-600 transition-all flex items-center justify-center space-x-4 active:scale-95 z-10"
                   >
                     <span>Challenges</span>
                     <i className="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
@@ -141,7 +141,7 @@ const Home: React.FC = () => {
 
                 <Link 
                   to="/reviews" 
-                  className="w-full sm:w-auto bg-white dark:bg-slate-800/70 backdrop-blur-xl text-slate-900 dark:text-white px-8 lg:px-10 py-4 lg:py-5 rounded-[20px] lg:rounded-[24px] text-[12px] lg:text-[13px] font-black uppercase tracking-widest shadow-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-all text-center border border-slate-200 active:scale-95"
+                  className="w-full sm:w-auto bg-white dark:bg-slate-800/70 backdrop-blur-xl text-slate-900 dark:text-white px-10 py-5 rounded-[24px] text-[13px] font-black uppercase tracking-widest shadow-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-all text-center border border-slate-200 dark:border-white/10 active:scale-95"
                 >
                   Our Story
                 </Link>

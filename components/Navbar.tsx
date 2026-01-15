@@ -100,18 +100,18 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleTheme }) => {
 
       {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 bg-white/98 dark:bg-slate-950/98 backdrop-blur-2xl md:hidden transition-all duration-500 ease-in-out ${isMenuOpen ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none -translate-y-full'}`}>
-        <div className="flex flex-col items-center justify-center h-full space-y-10 px-6 pt-20">
+        <div className="flex flex-col items-center justify-center h-full space-y-8 px-6 pt-20">
           {navLinks.map((link, idx) => (
             <Link
               key={link.name}
               to={link.path}
               style={{ transitionDelay: `${idx * 50}ms` }}
-              className={`text-lg font-extrabold uppercase tracking-[0.25em] transition-all hover:scale-105 active:scale-95 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'} ${location.pathname === link.path ? 'text-blue-600' : 'text-slate-700 dark:text-slate-200'}`}
+              className={`text-2xl font-black uppercase tracking-[0.15em] transition-all hover:scale-110 active:scale-95 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'} ${location.pathname === link.path ? 'text-blue-600' : 'text-slate-800 dark:text-slate-200'}`}
             >
               {link.name}
             </Link>
           ))}
-          <div className={`pt-12 border-t border-slate-200 dark:border-slate-800 w-full text-center transition-all delay-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0'}`}>
+          <div className={`pt-10 border-t border-slate-200 dark:border-slate-800 w-full text-center transition-all delay-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0'}`}>
             <p className="text-[11px] font-black text-slate-400 uppercase tracking-[0.4em] mb-6">Mission Genesis</p>
             <div className="flex justify-center space-x-10 text-slate-400 text-xl">
                <a href="https://www.youtube.com/@team_scaam" target="_blank" rel="noreferrer"><i className="fab fa-youtube hover:text-blue-600 transition-colors"></i></a>
