@@ -89,9 +89,9 @@ const Home: React.FC = () => {
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-100/40 dark:bg-indigo-900/10 rounded-full blur-[100px] opacity-30 -ml-24 -mb-24"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             
-            {/* 1st Place: Title + Description (Ordered first on mobile) */}
+            {/* 1st Place: Title + Description */}
             <div className="w-full lg:col-span-7 order-1 text-left flex flex-col">
               <div className="inline-flex self-start items-center space-x-2 px-4 py-2 bg-white dark:bg-blue-900/30 border border-slate-200 dark:border-blue-800/50 rounded-full mb-6 lg:mb-8 animate-fade-in shadow-sm">
                 <span className="w-2.5 h-2.5 bg-blue-600 rounded-full animate-ping"></span>
@@ -118,33 +118,36 @@ const Home: React.FC = () => {
               </p>
             </div>
 
-            {/* 2nd Place: Hero Image (Ordered after text on mobile) */}
+            {/* 2nd Place: Hero Image (Increased for Mobile) */}
             <div className="w-full lg:col-span-5 order-2 relative py-4 lg:py-0">
               <div className="relative">
-                <div className="relative w-full max-w-[280px] sm:max-w-[360px] lg:max-w-[480px] mx-auto aspect-[4/5] rounded-[32px] sm:rounded-[40px] lg:rounded-[56px] overflow-hidden border-[6px] lg:border-[12px] border-white dark:border-slate-800 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)] ring-1 ring-slate-100 dark:ring-slate-700 transform rotate-1 lg:rotate-2">
+                <div className="relative w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[480px] mx-auto aspect-[4/5] rounded-[40px] sm:rounded-[48px] lg:rounded-[56px] overflow-hidden border-[8px] lg:border-[12px] border-white dark:border-slate-800 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.3)] ring-1 ring-slate-100 dark:ring-slate-700 transform rotate-1 lg:rotate-2 group">
                   <img 
                     src="https://i.ibb.co/svFD3GyR/Whats-App-Image-2026-01-07-at-4-50-45-PM-4.jpg" 
                     alt="Team collaboration" 
-                    className="w-full h-full object-cover transition-transform duration-[2.5s] hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-[2.5s] group-hover:scale-110"
                     onError={handleImageError}
                     decoding="async"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 via-transparent to-transparent opacity-60"></div>
+                  
+                  {/* Decorative Scanline */}
+                  <div className="absolute inset-0 bg-blue-400/10 pointer-events-none mix-blend-overlay"></div>
                 </div>
 
-                <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 lg:-bottom-8 lg:-right-8 w-12 h-12 sm:w-16 sm:h-16 lg:w-28 lg:h-28 bg-blue-600 rounded-2xl lg:rounded-[32px] flex items-center justify-center text-white shadow-2xl animate-float z-20">
-                  <i className="fas fa-microchip text-xl sm:text-2xl lg:text-5xl"></i>
+                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 lg:-bottom-8 lg:-right-8 w-14 h-14 sm:w-20 sm:h-20 lg:w-28 lg:h-28 bg-blue-600 rounded-[20px] sm:rounded-[28px] lg:rounded-[32px] flex items-center justify-center text-white shadow-2xl animate-float z-20">
+                  <i className="fas fa-microchip text-2xl sm:text-3xl lg:text-5xl"></i>
                 </div>
               </div>
             </div>
 
-            {/* 3rd Place: CTA Buttons (Final order on mobile) */}
-            <div className="w-full lg:col-span-12 order-3 text-left mt-8 lg:mt-0">
-              <div className="flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-5 lg:gap-8">
+            {/* 3rd Place: CTA Buttons */}
+            <div className="w-full lg:col-span-12 order-3 text-left mt-10 lg:mt-0">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-6 lg:gap-8">
                 <div className="relative group w-full sm:w-auto">
                   <Link 
                     to="/challenges" 
-                    className="group relative bg-slate-900 dark:bg-black text-white px-10 py-5 rounded-[24px] text-[13px] font-black uppercase tracking-widest shadow-2xl hover:bg-blue-600 transition-all flex items-center justify-center space-x-4 active:scale-95 z-10"
+                    className="group relative bg-slate-900 dark:bg-black text-white px-10 py-5 rounded-[24px] text-[13px] font-black uppercase tracking-widest shadow-2xl hover:bg-blue-600 transition-all flex items-center justify-center space-x-4 active:scale-95 z-10 w-full"
                   >
                     <span>Challenges</span>
                     <i className="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>

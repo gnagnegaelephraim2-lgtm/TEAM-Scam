@@ -52,8 +52,9 @@ const Footer: React.FC = () => {
               <ul className="space-y-5 text-gray-400 font-bold text-sm">
                 <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
                 <li><Link to="/challenges" className="hover:text-white transition-colors">Challenges</Link></li>
-                <li><Link to="/reviews" className="hover:text-white transition-colors">Our Story</Link></li>
+                <li><Link to="/reviews" className="hover:text-white transition-colors">Story</Link></li>
                 <li><Link to="/reflections" className="hover:text-white transition-colors">Reflections</Link></li>
+                <li><Link to="/data-hub" className="hover:text-white transition-colors">Data Hub</Link></li>
               </ul>
             </div>
             
@@ -77,7 +78,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] font-black uppercase tracking-widest text-gray-600">
-          <p className="mb-4 md:mb-0">© 2025 Mission Genesis. System developed by Team S.C.A.A.M.</p>
+          <p className="mb-4 md:mb-0">© 2026 Mission Genesis. System developed by Team S.C.A.A.M.</p>
           <div className="flex space-x-8">
             <span className="text-slate-800">Academic Innovation Research</span>
             <span className="text-slate-800">Competency Ledger Alpha v1.2</span>
