@@ -72,17 +72,18 @@ const Home: React.FC = () => {
     <div className="min-h-screen transition-colors duration-300 bg-white dark:bg-slate-950">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-24 pb-12 lg:pb-0 lg:pt-24 overflow-hidden hero-pattern">
-        {/* Parallax Background Layer */}
+        {/* Parallax Background Layer - Slower movement for depth */}
         <div 
-          className="absolute inset-0 z-0 opacity-[0.4] dark:opacity-[0.1] grayscale pointer-events-none will-change-transform"
-          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+          className="absolute inset-0 z-0 opacity-[0.3] dark:opacity-[0.08] grayscale pointer-events-none will-change-transform"
+          style={{ transform: `translateY(${scrollY * 0.4}px)` }}
         >
           <img 
             src="https://i.ibb.co/GvgnFhMG/Pic2.jpg" 
-            className="w-full h-full object-cover scale-110" 
+            className="w-full h-full object-cover scale-125" 
             alt="Technical Schematic Background"
             decoding="async"
           />
+          <div className="absolute inset-0 bg-white dark:bg-slate-950 opacity-40"></div>
         </div>
 
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/40 dark:bg-blue-900/10 rounded-full blur-[120px] opacity-40 -mr-48 -mt-48 animate-pulse"></div>
@@ -182,13 +183,15 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="text-left order-2 lg:order-1">
-              <span className="text-blue-500 font-black uppercase tracking-[0.4em] text-[10px] mb-6 block">Problem Statement</span>
-              <h2 className="text-3xl md:text-5xl font-black text-white mb-10 leading-[1.1] tracking-tighter">
-                The <span className="text-blue-500">Human Capital</span> Constraints.
+              <h2 className="text-4xl md:text-6xl font-black text-white mb-6 leading-[1.1] tracking-tighter uppercase">
+                Problem <span className="text-blue-500">Statement</span>
               </h2>
+              <h3 className="text-xl md:text-2xl font-bold text-blue-500 mb-10 tracking-tight">
+                The Human Capital Constraints.
+              </h3>
               <div className="space-y-6 text-gray-400 text-base leading-relaxed font-medium">
                 <p>
-                  According to the World Bank Human Capital Index, children born in Cameroon today are expected to reach only <span className="text-white font-bold">38%</span> of their potential productivity as adults, compared to the 70% global average. Although about 44% of eligible children enroll in secondary school, these few students face a low likelihood of developing higher-order thinking skills (HOTS). This widespread underdevelopment of human capital undermines Cameroon’s potential for sustainable economic growth.
+                  According to the World Bank Human Capital Index, children born in Cameroon today are expected to reach only <span className="text-white font-bold">38%</span> of their potential productivity as adults, compared to the 70% global average. Although about 44% of eligible children enroll in secondary school, these few students face a low likelihood of developing higher order thinking skills (HOTS). This widespread underdevelopment of human capital undermines Cameroon’s potential for sustainable economic growth.
                 </p>
               </div>
             </div>
@@ -220,7 +223,9 @@ const Home: React.FC = () => {
       <section id="mission-statement-info" className="py-24 bg-white dark:bg-slate-900 text-left transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl text-left">
-             <h2 className="text-blue-600 font-black uppercase tracking-[0.3em] text-[10px] mb-8 text-left">Mission Statement</h2>
+             <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-8 tracking-tighter uppercase">
+                Mission <span className="text-blue-600">Statement</span>
+             </h2>
              <div className="space-y-8">
                <p className="text-slate-600 dark:text-gray-400 text-lg md:text-xl font-medium leading-relaxed max-w-4xl">
                   Our mission is to provide relevant quality education for secondary school students in <span className="text-blue-600">Cameroon</span>, equipping them with the knowledge, skills, and mindset to become active, innovative contributors to society.
@@ -244,9 +249,11 @@ const Home: React.FC = () => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl text-left mb-16">
-             <h2 className="text-blue-500 font-black uppercase tracking-[0.3em] text-[10px] mb-6 text-left">Proposed Solution</h2>
+             <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter uppercase">
+                Proposed <span className="text-blue-500">Solution</span>
+             </h2>
              <p className="text-gray-400 text-lg md:text-xl font-medium leading-relaxed max-w-4xl">
-                Mission Genesis is an AI-powered learning platform that transforms how secondary school students in Cameroon learn, think, and apply knowledge. It shifts education from rote memorization to real-world problem-solving, skill development, and opportunity discovery.
+                Mission Genesis is an AI-powered learning platform that transforms how secondary school students in Cameroon learn, think, and apply knowledge. It shifts education from rote memorization to real world problem-solving, skill development, and opportunity discovery.
              </p>
           </div>
           
@@ -260,7 +267,7 @@ const Home: React.FC = () => {
               { 
                 title: 'Learn by Doing, Not Memorization', 
                 icon: 'fa-vial-circle-check', 
-                desc: 'Mission Genesis turns academic concepts into interactive missions set in real African contexts. Instead of memorizing formulas, students apply physics, math, biology, and chemistry to solve real community problems—building critical thinking, creativity, and applied reasoning through action.',
+                desc: 'Mission Genesis turns academic concepts into interactive missions set in real African contexts. Instead of memorizing formulas, students apply physics, math, biology, and chemistry to solve real community problems building critical thinking, creativity, and applied reasoning through action.',
               }
             ].map((pillar) => (
               <div key={pillar.title} className="group relative bg-white/5 dark:bg-white/5 p-10 rounded-[40px] border border-white/10 transition-all duration-500 hover:bg-white/10 hover:shadow-2xl hover:-translate-y-2 overflow-hidden text-left">
@@ -284,7 +291,7 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
             <div className="text-left">
-              <h3 className="text-5xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter text-left">
+              <h3 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter text-left uppercase">
                 Our <span className="bg-blue-600 text-white px-5 py-2 rounded-lg shadow-xl inline-block ml-1">Team</span>
               </h3>
             </div>

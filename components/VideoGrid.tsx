@@ -16,11 +16,11 @@ const VideoGrid: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
           <div className="max-w-2xl text-left">
-            <h2 className="text-blue-600 font-black uppercase tracking-[0.2em] text-[10px] mb-3">
-              Mission Archives
+            <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white leading-tight tracking-tighter uppercase mb-4">
+              Mission <span className="gradient-text">Archives</span>
             </h2>
-            <h3 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight tracking-tighter">
-              Challenge <span className="gradient-text">Showcase</span>
+            <h3 className="text-[10px] font-black text-blue-600 uppercase tracking-[0.2em] mb-6">
+              Challenge Showcase Portfolio
             </h3>
             <p className="mt-4 text-base text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
               Direct access to Mission Genesis documentation. Every frame captures the transition from passive rote learning to applied innovation.

@@ -86,6 +86,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleTheme }) => {
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={`w-9 h-9 rounded-lg flex items-center justify-center transition-all active:scale-90 ${isMenuOpen ? 'bg-blue-600 text-white shadow-xl' : 'bg-slate-900 dark:bg-white text-white dark:text-slate-900'}`}
+            aria-label="Toggle menu"
           >
             <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'} text-sm`}></i>
           </button>
@@ -93,12 +94,21 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleTheme }) => {
       </div>
 
       {/* Mobile Slide-out Menu (Right Aligned) */}
-      <div className={`fixed top-0 right-0 h-screen w-[260px] bg-white dark:bg-[#080b14] shadow-[0_0_50px_rgba(0,0,0,0.3)] z-40 transform transition-transform duration-500 ease-in-out border-l border-slate-100 dark:border-white/5 md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed top-0 right-0 h-screen w-[260px] bg-white dark:bg-[#080b14] shadow-[0_0_50px_rgba(0,0,0,0.3)] z-[110] transform transition-transform duration-500 ease-in-out border-l border-slate-100 dark:border-white/5 md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        {/* Close Button Inside Panel */}
+        <button 
+          onClick={() => setIsMenuOpen(false)}
+          className="absolute top-6 right-4 w-10 h-10 rounded-xl flex items-center justify-center text-gray-400 hover:text-slate-900 dark:hover:text-white transition-all active:scale-90 z-[120]"
+          aria-label="Close menu"
+        >
+          <i className="fas fa-times text-xl"></i>
+        </button>
+
         <div className="flex flex-col h-full pt-20 px-4 pb-8 overflow-y-auto no-scrollbar">
           
-          {/* Social Icons - MOVED UP */}
+          {/* Social Icons */}
           <div className="flex space-x-3 mb-8">
-            <a href="https://www.youtube.com/@team_scaam" target="_blank" rel="noreferrer" className="w-10 h-10 bg-slate-900 dark:bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-red-600 transition-all shadow-md">
+            <a href="https://www.youtube.com/@team_scaam" target="_blank" rel="noreferrer" className="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center text-white transition-all shadow-[0_0_15px_rgba(220,38,38,0.4)] hover:scale-105 active:scale-95">
               <i className="fab fa-youtube text-lg"></i>
             </a>
             <a href="https://www.instagram.com/TEAM_SCAAM" target="_blank" rel="noreferrer" className="w-10 h-10 bg-slate-900 dark:bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-gradient-to-tr from-yellow-400 to-purple-600 transition-all shadow-md">
