@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -125,7 +124,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleTheme }) => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`group flex items-center justify-between p-3.5 rounded-2xl transition-all duration-300 active:scale-95 ${isActive ? 'bg-blue-600 text-white shadow-[0_8px_20px_-4px_rgba(37,99,235,0.4)]' : 'bg-slate-50 dark:bg-[#121826] text-slate-900 dark:text-white border border-transparent dark:border-white/5 hover:border-blue-500/30'}`}
+                  className={`group flex items-center justify-between p-3.5 rounded-2xl transition-all duration-300 active:scale-95 ${isActive ? 'bg-blue-600 text-white shadow-[0_8px_20px_-4px_rgba(37,99,235,0.4)]' : 'bg-white dark:bg-[#121826] text-slate-900 dark:text-white border border-slate-100 dark:border-white/5 hover:border-blue-500/30 shadow-sm'}`}
                 >
                   <div className="flex items-center space-x-4">
                     <div className={`w-8 h-8 rounded-xl flex items-center justify-center ${isActive ? 'bg-white/20' : 'bg-white dark:bg-slate-800 shadow-sm'}`}>

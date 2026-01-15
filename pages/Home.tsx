@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import VideoGrid from '../components/VideoGrid';
@@ -26,7 +25,7 @@ const Home: React.FC = () => {
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
 
-    // Typewriter animation logic
+    // Typewriter animation logic - Snappier
     let charIndex1 = 0;
     const type1 = setInterval(() => {
       setText1(fullText1.slice(0, charIndex1 + 1));
@@ -41,12 +40,12 @@ const Home: React.FC = () => {
             setText2(fullText2.slice(0, charIndex2 + 1));
             charIndex2++;
             if (charIndex2 === fullText2.length) clearInterval(type2);
-          }, 120);
-        }, 200);
+          }, 60);
+        }, 150);
       }
-    }, 150);
+    }, 80);
 
-    // Scroll observer for entrance animations
+    // Scroll observer for entrance animations - Faster triggers
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
@@ -77,10 +76,10 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen transition-colors duration-300 bg-white dark:bg-slate-950">
+    <div className="min-h-screen transition-colors duration-200 bg-white dark:bg-slate-950">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-24 pb-12 lg:pb-0 lg:pt-24 overflow-hidden hero-pattern">
-        {/* Parallax Background Layer - Slower movement for depth */}
+        {/* Parallax Background Layer */}
         <div 
           className="absolute inset-0 z-0 opacity-[0.3] dark:opacity-[0.08] grayscale pointer-events-none will-change-transform"
           style={{ transform: `translateY(${scrollY * 0.4}px)` }}
@@ -127,14 +126,14 @@ const Home: React.FC = () => {
               </p>
             </div>
 
-            {/* 2nd Place: Hero Image (Increased for Mobile) */}
+            {/* 2nd Place: Hero Image */}
             <div className="w-full lg:col-span-5 order-2 relative py-4 lg:py-0">
               <div className="relative">
                 <div className="relative w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[480px] mx-auto aspect-[4/5] rounded-[40px] sm:rounded-[48px] lg:rounded-[56px] overflow-hidden border-[8px] lg:border-[12px] border-white dark:border-slate-800 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.3)] ring-1 ring-slate-100 dark:ring-slate-700 transform rotate-1 lg:rotate-2 group">
                   <img 
                     src="https://i.ibb.co/svFD3GyR/Whats-App-Image-2026-01-07-at-4-50-45-PM-4.jpg" 
                     alt="Team collaboration" 
-                    className="w-full h-full object-cover transition-transform duration-[2.5s] group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"
                     onError={handleImageError}
                     decoding="async"
                   />
@@ -180,7 +179,7 @@ const Home: React.FC = () => {
       <section 
         ref={problemSectionRef}
         id="problem-statement-info" 
-        className={`py-24 bg-slate-900 dark:bg-black relative overflow-hidden text-left transition-all duration-1000 ease-out transform ${problemVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+        className={`py-24 bg-slate-900 dark:bg-black relative overflow-hidden text-left transition-all duration-700 ease-out transform ${problemVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
       >
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
           <img 
@@ -218,7 +217,7 @@ const Home: React.FC = () => {
                     strokeDasharray="282.7" 
                     strokeDashoffset="175.2" 
                     strokeLinecap="round"
-                    className="transition-all duration-[2s] ease-out"
+                    className="transition-all duration-[1s] ease-out"
                   />
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
@@ -235,7 +234,7 @@ const Home: React.FC = () => {
       <section 
         ref={missionSectionRef}
         id="mission-statement-info" 
-        className={`py-24 bg-white dark:bg-slate-900 text-left transition-all duration-1000 ease-out transform ${missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+        className={`py-24 bg-white dark:bg-slate-900 text-left transition-all duration-700 ease-out transform ${missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl text-left">
@@ -252,7 +251,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Proposed Solution Section */}
-      <section id="proposed-solution" className="py-24 bg-slate-900 dark:bg-black text-left transition-colors duration-300 relative overflow-hidden">
+      <section id="proposed-solution" className="py-24 bg-slate-900 dark:bg-black text-left transition-colors duration-200 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none grayscale">
           <img 
             src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=70&w=1200" 
@@ -286,9 +285,9 @@ const Home: React.FC = () => {
                 desc: 'Mission Genesis turns academic concepts into interactive missions set in real African contexts. Instead of memorizing formulas, students apply physics, math, biology, and chemistry to solve real community problems—building critical thinking, creativity, and applied reasoning through action.',
               }
             ].map((pillar) => (
-              <div key={pillar.title} className="group relative bg-white/5 dark:bg-white/5 p-10 rounded-[40px] border border-white/10 transition-all duration-500 hover:bg-white/10 hover:shadow-2xl hover:-translate-y-2 overflow-hidden text-left">
+              <div key={pillar.title} className="group relative bg-white/5 dark:bg-white/5 p-10 rounded-[40px] border border-white/10 transition-all duration-300 hover:bg-white/10 hover:shadow-2xl hover:-translate-y-1 overflow-hidden text-left">
                 <div className="relative z-10">
-                  <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-blue-500 mb-8 shadow-sm border border-white/10 transform group-hover:scale-110 group-hover:rotate-6 transition-all">
+                  <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-blue-500 mb-8 shadow-sm border border-white/10 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                     <i className={`fas ${pillar.icon} text-xl`}></i>
                   </div>
                   <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-600 transition-colors text-left">{pillar.title}</h4>
@@ -303,7 +302,7 @@ const Home: React.FC = () => {
       <VideoGrid />
 
       {/* Team Section */}
-      <section ref={teamSectionRef} className="py-24 bg-white dark:bg-black text-left transition-colors duration-300 relative">
+      <section ref={teamSectionRef} className="py-24 bg-white dark:bg-black text-left transition-colors duration-200 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
             <div className="text-left">
@@ -320,18 +319,18 @@ const Home: React.FC = () => {
             {TEAM_MEMBERS.map((member, index) => (
               <div 
                 key={member.id} 
-                className={`group text-center transition-all duration-1000 ease-out transform ${
+                className={`group text-center transition-all duration-700 ease-out transform ${
                   teamVisible 
                     ? 'opacity-100 translate-y-0 scale-100' 
-                    : 'opacity-0 translate-y-12 scale-90'
+                    : 'opacity-0 translate-y-8 scale-95'
                 }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
+                style={{ transitionDelay: `${index * 80}ms` }}
               >
                 <div className="relative aspect-square max-w-[180px] mx-auto rounded-[32px] overflow-hidden mb-6 border-4 border-slate-50 dark:border-slate-800 shadow-lg">
                   <img 
                     src={member.image} 
                     alt={member.name} 
-                    className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110" 
+                    className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110" 
                     onError={handleImageError} 
                     loading="lazy"
                     decoding="async"

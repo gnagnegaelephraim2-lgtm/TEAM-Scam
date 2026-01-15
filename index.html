@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,7 +32,7 @@
         scroll-behavior: smooth;
         background-color: #ffffff; /* Pure White background */
         color: var(--brand-dark);
-        transition: background-color 0.3s ease, color 0.3s ease;
+        transition: background-color 0.2s ease, color 0.2s ease;
       }
       .dark body {
         background-color: #0f172a; /* Reverted to Original Blueish Dark Mode */
@@ -42,7 +41,7 @@
       
       /* Optimized Image Loading Transition */
       img {
-        transition: opacity 0.5s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
       }
       img:not([src]) {
         opacity: 0;
@@ -53,6 +52,7 @@
 
       .gradient-text {
         background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+        -webkit-background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -74,12 +74,12 @@
         background-image: radial-gradient(#1e293b 1px, transparent 1px);
       }
       @keyframes float {
-        0% { transform: translateY(0px) rotate(2deg); }
-        50% { transform: translateY(-20px) rotate(-1deg); }
-        100% { transform: translateY(0px) rotate(2deg); }
+        0% { transform: translateY(0px) rotate(1.5deg); }
+        50% { transform: translateY(-15px) rotate(-1deg); }
+        100% { transform: translateY(0px) rotate(1.5deg); }
       }
       .animate-float {
-        animation: float 6s ease-in-out infinite;
+        animation: float 3s ease-in-out infinite;
       }
       .mask-image-linear {
         mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
@@ -88,7 +88,7 @@
         width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #f1f5f9;
+        background: #fdfdfd;
       }
       .dark ::-webkit-scrollbar-track {
         background: #0f172a;
@@ -115,7 +115,7 @@
 }
 </script>
 </head>
-  <body class="selection:bg-blue-100 selection:text-blue-900 dark:selection:bg-blue-900/40 dark:selection:text-blue-100 transition-colors duration-300">
+  <body class="selection:bg-blue-100 selection:text-blue-900 dark:selection:bg-blue-900/40 dark:selection:text-blue-100 transition-colors duration-200">
     <div id="root"></div>
   </body>
 </html>
