@@ -255,7 +255,7 @@ const Home: React.FC = () => {
               { 
                 title: 'Measure Skills, Not Grades', 
                 icon: 'fa-id-card-clip', 
-                desc: 'Traditional grades hide real ability. Mission Genesis replaces exams with a Skill Passport that tracks how students grow in problem-solving, systems thinking, innovation, and resilience. Progress is measured by decisions made, strategies tested, and adaptability—not just right or wrong answers.',
+                desc: 'Traditional grades hide real ability. Mission Genesis replaces exams with a Skill Passport that tracks how students grow in problem-solving, systems thinking, innovation, and resilience. Progress is measured by decisions made, strategies tested, and adaptability not just right or wrong answers.',
               },
               { 
                 title: 'Learn by Doing, Not Memorization', 
