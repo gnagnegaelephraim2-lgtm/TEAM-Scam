@@ -6,10 +6,15 @@ import { TEAM_MEMBERS } from '../constants';
 
 const Home: React.FC = () => {
   const [teamVisible, setTeamVisible] = useState(false);
+  const [problemVisible, setProblemVisible] = useState(false);
+  const [missionVisible, setMissionVisible] = useState(false);
   const [text1, setText1] = useState('');
   const [text2, setText2] = useState('');
   const [scrollY, setScrollY] = useState(0);
+  
   const teamSectionRef = useRef<HTMLElement>(null);
+  const problemSectionRef = useRef<HTMLElement>(null);
+  const missionSectionRef = useRef<HTMLElement>(null);
 
   const fullText1 = "TEAM";
   const fullText2 = "S.C.A.A.M";
@@ -41,20 +46,23 @@ const Home: React.FC = () => {
       }
     }, 150);
 
-    // Scroll observer for team section
+    // Scroll observer for entrance animations
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTeamVisible(true);
-          observer.unobserve(entry.target);
-        }
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (entry.target === teamSectionRef.current) setTeamVisible(true);
+            if (entry.target === problemSectionRef.current) setProblemVisible(true);
+            if (entry.target === missionSectionRef.current) setMissionVisible(true);
+          }
+        });
       },
       { threshold: 0.1 }
     );
 
-    if (teamSectionRef.current) {
-      observer.observe(teamSectionRef.current);
-    }
+    if (teamSectionRef.current) observer.observe(teamSectionRef.current);
+    if (problemSectionRef.current) observer.observe(problemSectionRef.current);
+    if (missionSectionRef.current) observer.observe(missionSectionRef.current);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -169,7 +177,11 @@ const Home: React.FC = () => {
       </section>
 
       {/* Problem Statement Section */}
-      <section id="problem-statement-info" className="py-24 bg-slate-900 dark:bg-black relative overflow-hidden text-left">
+      <section 
+        ref={problemSectionRef}
+        id="problem-statement-info" 
+        className={`py-24 bg-slate-900 dark:bg-black relative overflow-hidden text-left transition-all duration-1000 ease-out transform ${problemVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+      >
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
           <img 
             src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=70&w=1200" 
@@ -191,7 +203,7 @@ const Home: React.FC = () => {
               </h3>
               <div className="space-y-6 text-gray-400 text-base leading-relaxed font-medium">
                 <p>
-                  According to the World Bank Human Capital Index, children born in Cameroon today are expected to reach only <span className="text-white font-bold">38%</span> of their potential productivity as adults, compared to the 70% global average. Although about 44% of eligible children enroll in secondary school, these few students face a low likelihood of developing higher order thinking skills (HOTS). This widespread underdevelopment of human capital undermines Cameroon’s potential for sustainable economic growth.
+                  According to the World Bank Human Capital Index, children born in Cameroon today are expected to reach only <span className="text-white font-bold">38%</span> of their potential productivity as adults, compared to the 70% global average. Although about 44% of eligible children enroll in secondary school, these few students face a low likelihood of developing higher-order thinking skills (HOTS). This widespread underdevelopment of human capital undermines Cameroon’s potential for sustainable economic growth.
                 </p>
               </div>
             </div>
@@ -220,7 +232,11 @@ const Home: React.FC = () => {
       </section>
 
       {/* Mission Statement Section */}
-      <section id="mission-statement-info" className="py-24 bg-white dark:bg-slate-900 text-left transition-colors duration-300">
+      <section 
+        ref={missionSectionRef}
+        id="mission-statement-info" 
+        className={`py-24 bg-white dark:bg-slate-900 text-left transition-all duration-1000 ease-out transform ${missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl text-left">
              <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-8 tracking-tighter uppercase">
@@ -253,7 +269,7 @@ const Home: React.FC = () => {
                 Proposed <span className="text-blue-500">Solution</span>
              </h2>
              <p className="text-gray-400 text-lg md:text-xl font-medium leading-relaxed max-w-4xl">
-                Mission Genesis is an AI-powered learning platform that transforms how secondary school students in Cameroon learn, think, and apply knowledge. It shifts education from rote memorization to real world problem-solving, skill development, and opportunity discovery.
+                Mission Genesis is an AI-powered learning platform that transforms how secondary school students in Cameroon learn, think, and apply knowledge. It shifts education from rote memorization to real-world problem-solving, skill development, and opportunity discovery.
              </p>
           </div>
           
@@ -267,7 +283,7 @@ const Home: React.FC = () => {
               { 
                 title: 'Learn by Doing, Not Memorization', 
                 icon: 'fa-vial-circle-check', 
-                desc: 'Mission Genesis turns academic concepts into interactive missions set in real African contexts. Instead of memorizing formulas, students apply physics, math, biology, and chemistry to solve real community problems building critical thinking, creativity, and applied reasoning through action.',
+                desc: 'Mission Genesis turns academic concepts into interactive missions set in real African contexts. Instead of memorizing formulas, students apply physics, math, biology, and chemistry to solve real community problems—building critical thinking, creativity, and applied reasoning through action.',
               }
             ].map((pillar) => (
               <div key={pillar.title} className="group relative bg-white/5 dark:bg-white/5 p-10 rounded-[40px] border border-white/10 transition-all duration-500 hover:bg-white/10 hover:shadow-2xl hover:-translate-y-2 overflow-hidden text-left">
