@@ -126,7 +126,7 @@ const DataHub: React.FC = () => {
 
   if (bootSequence) {
     return (
-      <div className="fixed inset-0 bg-[#020617] flex items-center justify-center z-[200] font-mono p-8">
+      <div className="fixed inset-0 bg-[#0f172a] flex items-center justify-center z-[200] font-mono p-8">
         <div className="max-w-xl w-full">
           <div className="flex items-center space-x-3 mb-8">
             <div className="w-3 h-3 bg-blue-600 rounded-full animate-ping"></div>
@@ -149,11 +149,11 @@ const DataHub: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#020617] text-white pt-24 pb-32 font-sans selection:bg-blue-600 selection:text-white overflow-x-hidden relative">
+    <div className="min-h-screen bg-[#0f172a] text-white pt-24 pb-32 font-sans selection:bg-blue-600 selection:text-white overflow-x-hidden relative">
       {/* HUD Background elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#1e3a8a22_0%,transparent_70%)]"></div>
-        <div className="absolute top-0 left-0 w-full h-full opacity-10" style={{ backgroundImage: 'linear-gradient(#2563eb 1px, transparent 1px), linear-gradient(90deg, #2563eb 1px, transparent 1px)', backgroundSize: '100px 100px' }}></div>
+        <div className="absolute top-0 left-0 w-full h-full opacity-10" style={{ backgroundImage: 'linear-gradient(#1e293b 1px, transparent 1px), linear-gradient(90deg, #1e293b 1px, transparent 1px)', backgroundSize: '100px 100px' }}></div>
       </div>
 
       {/* Module Loading Overlay */}
@@ -175,7 +175,7 @@ const DataHub: React.FC = () => {
 
       {/* Active Module Simulation Overlay */}
       {activeModule && (
-        <div className="fixed inset-0 z-[250] bg-[#020617] flex flex-col p-4 md:p-8 animate-fade-in">
+        <div className="fixed inset-0 z-[250] bg-[#0f172a] flex flex-col p-4 md:p-8 animate-fade-in">
            <header className="flex justify-between items-center mb-8 border-b border-white/10 pb-6">
               <div className="flex items-center space-x-4">
                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center font-black">M</div>
@@ -254,7 +254,7 @@ const DataHub: React.FC = () => {
       )}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row md:items-center justify-start mb-12 gap-8 animate-fade-in">
+        <div className="flex flex-col md:flex-row md:items-center justify-start mb-12 gap-8 animate-fade-in text-left">
           <div className="text-left">
             <div className="inline-flex items-center space-x-2 px-3 py-1 bg-blue-600/10 border border-blue-500/20 rounded-full mb-6">
               <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
@@ -346,7 +346,7 @@ const DataHub: React.FC = () => {
             {/* Repository Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white/[0.03] border border-white/10 rounded-[40px] p-8 text-left">
-                <h4 className="text-[11px] font-black text-blue-500 uppercase tracking-widest mb-6">Official Data Uplinks</h4>
+                <h4 className="text-[11px] font-black text-blue-500 uppercase tracking-widest mb-6 text-left">Official Data Uplinks</h4>
                 <div className="grid grid-cols-1 gap-4">
                   {DATA_SOURCES.map((source) => (
                     <a 
@@ -443,7 +443,7 @@ const DataHub: React.FC = () => {
         </div>
 
         {/* HUD Command Terminal (Fixed Bottom) */}
-        <div className="fixed bottom-0 left-0 w-full bg-[#020617]/90 backdrop-blur-xl border-t border-white/10 p-4 md:px-8 z-[150] animate-in slide-in-from-bottom duration-500 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+        <div className="fixed bottom-0 left-0 w-full bg-[#0a0a0a]/90 backdrop-blur-xl border-t border-white/10 p-4 md:px-8 z-[150] animate-in slide-in-from-bottom duration-500 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
            <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-4">
               <div className="flex-grow w-full">
                  <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden h-24 md:h-16 flex flex-col md:flex-row items-stretch">

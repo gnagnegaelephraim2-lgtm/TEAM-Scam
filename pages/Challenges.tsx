@@ -21,7 +21,7 @@ const Challenges: React.FC = () => {
   };
 
   return (
-    <div className="pt-32 pb-24 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 min-h-screen">
+    <div className="pt-32 pb-24 bg-white dark:bg-slate-950 transition-colors duration-300 min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="mb-24 text-left border-l-4 border-blue-600 pl-8">
           <h1 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6 tracking-tighter">
@@ -70,7 +70,7 @@ const Challenges: React.FC = () => {
                   <p>{challenge.description}</p>
                 </div>
                 
-                <div className="mt-10 bg-white dark:bg-slate-900 p-8 rounded-[40px] border border-slate-100 dark:border-slate-800 relative overflow-hidden group/card transition-colors shadow-sm">
+                <div className="mt-10 bg-white dark:bg-slate-900 p-8 rounded-[40px] border border-slate-100 dark:border-white/5 relative overflow-hidden group/card transition-colors shadow-sm">
                   <div className="absolute top-0 right-0 p-8 opacity-[0.03] dark:opacity-5">
                     <i className="fas fa-lightbulb text-6xl text-blue-600"></i>
                   </div>

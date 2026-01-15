@@ -10,7 +10,7 @@ const Reviews: React.FC = () => {
   };
 
   return (
-    <div className="pt-20 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 min-h-screen">
+    <div className="pt-20 bg-white dark:bg-slate-950 transition-colors duration-300 min-h-screen">
       {/* Hero Header Section with Background Image */}
       <section className="relative py-24 md:py-32 overflow-hidden mb-16">
         {/* Background Image Layer */}
@@ -24,7 +24,7 @@ const Reviews: React.FC = () => {
           />
           {/* Overlay to ensure readability and blend with the light theme */}
           <div className="absolute inset-0 bg-white/70 dark:bg-slate-950/80 backdrop-blur-[1px]"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-50/10 to-slate-50 dark:via-slate-950/20 dark:to-slate-950"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-white dark:via-slate-950/20 dark:to-slate-950"></div>
         </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -106,7 +106,7 @@ const Reviews: React.FC = () => {
         </div>
 
         {/* Data Analysis Section */}
-        <section className="mt-32 bg-gray-950 dark:bg-black rounded-[60px] p-16 text-center relative overflow-hidden group transition-colors shadow-2xl">
+        <section className="mt-32 bg-slate-950 dark:bg-black rounded-[60px] p-16 text-center relative overflow-hidden group transition-colors shadow-2xl">
           <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
           
           <div className="relative z-10 py-8">

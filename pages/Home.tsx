@@ -6,9 +6,35 @@ import { TEAM_MEMBERS } from '../constants';
 
 const Home: React.FC = () => {
   const [teamVisible, setTeamVisible] = useState(false);
+  const [text1, setText1] = useState('');
+  const [text2, setText2] = useState('');
   const teamSectionRef = useRef<HTMLElement>(null);
 
+  const fullText1 = "TEAM";
+  const fullText2 = "S.C.A.A.M";
+
   useEffect(() => {
+    // Typewriter animation logic
+    let charIndex1 = 0;
+    const type1 = setInterval(() => {
+      setText1(fullText1.slice(0, charIndex1 + 1));
+      charIndex1++;
+      if (charIndex1 === fullText1.length) {
+        clearInterval(type1);
+        
+        // Start second word after a small delay
+        let charIndex2 = 0;
+        setTimeout(() => {
+          const type2 = setInterval(() => {
+            setText2(fullText2.slice(0, charIndex2 + 1));
+            charIndex2++;
+            if (charIndex2 === fullText2.length) clearInterval(type2);
+          }, 120);
+        }, 200);
+      }
+    }, 150);
+
+    // Scroll observer for team section
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -23,7 +49,10 @@ const Home: React.FC = () => {
       observer.observe(teamSectionRef.current);
     }
 
-    return () => observer.disconnect();
+    return () => {
+      clearInterval(type1);
+      observer.disconnect();
+    };
   }, []);
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
@@ -32,9 +61,9 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen transition-colors duration-300 bg-slate-50 dark:bg-slate-950">
+    <div className="min-h-screen transition-colors duration-300 bg-white dark:bg-slate-950">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden hero-pattern">
+      <section className="relative min-h-[90vh] flex items-center pt-24 pb-12 lg:pb-0 lg:pt-24 overflow-hidden hero-pattern">
         <div className="absolute inset-0 z-0 opacity-[0.4] dark:opacity-[0.1] grayscale pointer-events-none">
           <img 
             src="https://i.ibb.co/GvgnFhMG/Pic2.jpg" 
@@ -44,32 +73,38 @@ const Home: React.FC = () => {
           />
         </div>
 
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/40 dark:bg-blue-900/20 rounded-full blur-[120px] opacity-40 -mr-48 -mt-48 animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-100/40 dark:bg-indigo-900/20 rounded-full blur-[100px] opacity-30 -ml-24 -mb-24"></div>
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/40 dark:bg-blue-900/10 rounded-full blur-[120px] opacity-40 -mr-48 -mt-48 animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-100/40 dark:bg-indigo-900/10 rounded-full blur-[100px] opacity-30 -ml-24 -mb-24"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            <div className="lg:col-span-7 text-left">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div className="lg:col-span-7 text-left order-2 lg:order-1">
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white dark:bg-blue-900/30 border border-slate-200 dark:border-blue-800/50 rounded-full mb-8 animate-fade-in shadow-sm">
                 <span className="w-2.5 h-2.5 bg-blue-600 rounded-full animate-ping"></span>
                 <span className="text-[10px] font-black text-slate-600 dark:text-blue-300 uppercase tracking-[0.2em]">S.C.A.A.M Impact</span>
               </div>
               
-              <div className="mb-8">
-                <h1 className="text-6xl md:text-8xl lg:text-[120px] font-black text-slate-900 dark:text-white leading-[0.85] tracking-tighter text-left uppercase mb-4">
-                  TEAM
+              <div className="mb-8 min-h-[120px] md:min-h-[180px] lg:min-h-[260px] flex flex-col justify-center">
+                <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[120px] font-black text-slate-900 dark:text-white leading-[0.85] tracking-tighter text-left uppercase mb-4 relative">
+                  {text1}
+                  {text1.length > 0 && text1.length < fullText1.length && (
+                    <span className="inline-block w-[4px] h-[0.8em] bg-blue-600 ml-2 animate-pulse align-middle"></span>
+                  )}
                 </h1>
-                <h1 className="text-6xl md:text-8xl lg:text-[120px] font-black text-blue-600 leading-[0.85] tracking-tighter text-left uppercase">
-                  S.C.A.A.M
+                <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[120px] font-black text-blue-600 leading-[0.85] tracking-tighter text-left uppercase relative">
+                  {text2}
+                  {text2.length >= 0 && text1.length === fullText1.length && text2.length < fullText2.length && (
+                    <span className="inline-block w-[4px] h-[0.8em] bg-slate-900 dark:bg-white ml-2 animate-pulse align-middle"></span>
+                  )}
                 </h1>
               </div>
               
-              <p className="text-xl md:text-2xl text-slate-600 dark:text-gray-400 mb-12 leading-relaxed max-w-xl font-medium text-left">
+              <p className="text-lg md:text-xl lg:text-2xl text-slate-600 dark:text-gray-400 mb-12 leading-relaxed max-w-xl font-medium text-left">
                 Equipping students with the knowledge, skills, and mindset to become active, innovative contributors to society.
               </p>
               
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-                <div className="relative group">
+                <div className="relative group w-full sm:w-auto">
                   <Link 
                     to="/challenges" 
                     className="group relative bg-slate-900 dark:bg-black text-white px-10 py-5 rounded-[24px] text-[13px] font-black uppercase tracking-widest shadow-2xl hover:bg-blue-600 transition-all flex items-center justify-center space-x-3 active:scale-95 z-10"
@@ -81,16 +116,16 @@ const Home: React.FC = () => {
 
                 <Link 
                   to="/reviews" 
-                  className="bg-white dark:bg-slate-800/70 backdrop-blur-xl text-slate-900 dark:text-white px-10 py-5 rounded-[24px] text-[13px] font-black uppercase tracking-widest shadow-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-all text-center border border-slate-200 active:scale-95"
+                  className="w-full sm:w-auto bg-white dark:bg-slate-800/70 backdrop-blur-xl text-slate-900 dark:text-white px-10 py-5 rounded-[24px] text-[13px] font-black uppercase tracking-widest shadow-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-all text-center border border-slate-200 active:scale-95"
                 >
                   Our Story
                 </Link>
               </div>
             </div>
             
-            <div className="lg:col-span-5 relative hidden lg:block">
+            <div className="lg:col-span-5 relative order-1 lg:order-2">
               <div className="relative">
-                <div className="relative w-full max-w-[450px] mx-auto aspect-[4/5] rounded-[48px] overflow-hidden border-[12px] border-white dark:border-slate-800 shadow-2xl ring-1 ring-slate-100 dark:ring-slate-700 transform rotate-2">
+                <div className="relative w-full max-w-[320px] sm:max-w-[450px] mx-auto aspect-[4/5] rounded-[40px] lg:rounded-[48px] overflow-hidden border-[8px] lg:border-[12px] border-white dark:border-slate-800 shadow-2xl ring-1 ring-slate-100 dark:ring-slate-700 transform rotate-2">
                   <img 
                     src="https://i.ibb.co/svFD3GyR/Whats-App-Image-2026-01-07-at-4-50-45-PM-4.jpg" 
                     alt="Team collaboration" 
@@ -101,8 +136,8 @@ const Home: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 via-transparent to-transparent"></div>
                 </div>
 
-                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-blue-600 rounded-3xl flex items-center justify-center text-white shadow-2xl animate-float z-20">
-                  <i className="fas fa-microchip text-4xl"></i>
+                <div className="absolute -bottom-4 -right-4 lg:-bottom-6 lg:-right-6 w-16 h-16 lg:w-24 lg:h-24 bg-blue-600 rounded-2xl lg:rounded-3xl flex items-center justify-center text-white shadow-2xl animate-float z-20">
+                  <i className="fas fa-microchip text-2xl lg:text-4xl"></i>
                 </div>
               </div>
             </div>
@@ -160,7 +195,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Mission Statement Section */}
-      <section id="mission-statement-info" className="py-24 bg-white dark:bg-slate-900/50 text-left transition-colors duration-300">
+      <section id="mission-statement-info" className="py-24 bg-white dark:bg-slate-900 text-left transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl text-left">
              <h2 className="text-blue-600 font-black uppercase tracking-[0.3em] text-[10px] mb-8 text-left">Mission Statement</h2>
@@ -247,7 +282,7 @@ const Home: React.FC = () => {
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
-                <div className="relative aspect-square max-w-[180px] mx-auto rounded-[32px] overflow-hidden mb-6 border-4 border-slate-50 dark:border-slate-900 shadow-lg">
+                <div className="relative aspect-square max-w-[180px] mx-auto rounded-[32px] overflow-hidden mb-6 border-4 border-slate-50 dark:border-slate-800 shadow-lg">
                   <img 
                     src={member.image} 
                     alt={member.name} 

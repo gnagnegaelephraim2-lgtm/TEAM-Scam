@@ -10,7 +10,7 @@ const VideoGrid: React.FC = () => {
   };
 
   return (
-    <div id="video-showcase" className="py-24 bg-slate-50 dark:bg-slate-900/50 relative overflow-hidden transition-colors duration-300">
+    <div id="video-showcase" className="py-24 bg-white dark:bg-slate-900/50 relative overflow-hidden transition-colors duration-300">
       <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#1e40af 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

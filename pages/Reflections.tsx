@@ -25,7 +25,7 @@ const Reflections: React.FC = () => {
   };
 
   return (
-    <div className="pt-32 pb-24 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 min-h-screen">
+    <div className="pt-32 pb-24 bg-white dark:bg-slate-950 transition-colors duration-300 min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="mb-24 text-left border-l-4 border-blue-600 pl-8 relative">
            <div className="absolute top-0 right-0 opacity-10 hidden lg:block">

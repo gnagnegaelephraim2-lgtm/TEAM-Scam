@@ -5,7 +5,7 @@ import { SOCIALS } from '../constants';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-950 text-white pt-24 pb-12 overflow-hidden relative">
+    <footer className="bg-slate-950 text-white pt-24 pb-12 overflow-hidden relative border-t border-white/5">
       {/* Decorative Gradient Flare */}
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[100px] -mb-48 -mr-48"></div>
 
@@ -79,8 +79,8 @@ const Footer: React.FC = () => {
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] font-black uppercase tracking-widest text-gray-600">
           <p className="mb-4 md:mb-0">© 2025 Mission Genesis. System developed by Team S.C.A.A.M.</p>
           <div className="flex space-x-8">
-            <span className="text-blue-900/40">Academic Innovation Research</span>
-            <span className="text-blue-900/40">Competency Ledger Alpha v1.2</span>
+            <span className="text-slate-800">Academic Innovation Research</span>
+            <span className="text-slate-800">Competency Ledger Alpha v1.2</span>
           </div>
         </div>
       </div>

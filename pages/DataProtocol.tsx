@@ -3,7 +3,7 @@ import React from 'react';
 
 const DataProtocol: React.FC = () => {
   return (
-    <div className="pt-32 pb-24 bg-slate-50 dark:bg-slate-950 min-h-screen transition-colors duration-300">
+    <div className="pt-32 pb-24 bg-white dark:bg-slate-950 min-h-screen transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         <header className="mb-16 text-left">
           <h2 className="text-blue-600 font-black uppercase tracking-[0.2em] text-[10px] mb-4">Technical Standards</h2>
@@ -26,7 +26,7 @@ const DataProtocol: React.FC = () => {
               <h4 className="text-blue-900 dark:text-blue-400 font-black mb-2 uppercase tracking-widest text-xs">Encryption Standard</h4>
               <p className="text-sm text-blue-950 dark:text-blue-300/80 font-bold">AES-256 bit encryption at rest for all competency verification records.</p>
             </div>
-            <div className="bg-white dark:bg-slate-900 p-8 rounded-[40px] border border-slate-100 dark:border-slate-800 shadow-sm text-left">
+            <div className="bg-white dark:bg-slate-900 p-8 rounded-[40px] border border-slate-100 dark:border-white/5 shadow-sm text-left">
               <h4 className="text-slate-950 dark:text-white font-black mb-2 uppercase tracking-widest text-xs">Anonymization</h4>
               <p className="text-sm font-bold">Researchers analyze trends using anonymized ID pools to prevent bias.</p>
             </div>

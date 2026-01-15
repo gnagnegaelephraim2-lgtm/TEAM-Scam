@@ -3,7 +3,7 @@ import React from 'react';
 
 const TermsOfMission: React.FC = () => {
   return (
-    <div className="pt-32 pb-24 bg-slate-50 dark:bg-slate-950 min-h-screen transition-colors duration-300">
+    <div className="pt-32 pb-24 bg-white dark:bg-slate-950 min-h-screen transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         <header className="mb-16 text-left">
           <h2 className="text-blue-600 font-black uppercase tracking-[0.2em] text-[10px] mb-4">Operational Guidelines</h2>
@@ -42,7 +42,7 @@ const TermsOfMission: React.FC = () => {
             </p>
           </section>
 
-          <div className="mt-16 pt-8 border-t border-slate-100 dark:border-slate-800 text-sm text-slate-400 font-bold">
+          <div className="mt-16 pt-8 border-t border-slate-100 dark:border-white/5 text-sm text-slate-400 font-bold">
             Last Updated: January 2026 | Mission Code: GENESIS-BUEA-ALPHA
           </div>
         </div>
