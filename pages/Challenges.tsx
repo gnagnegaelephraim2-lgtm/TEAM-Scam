@@ -19,6 +19,10 @@ const Challenges: React.FC = () => {
     target.src = "https://i.ibb.co/LXcbQL8S/Pic1.jpg";
   };
 
+  const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    (e.target as HTMLImageElement).classList.add('loaded');
+  };
+
   return (
     <div className="pt-24 pb-24 bg-white dark:bg-slate-950 transition-colors duration-200 min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,7 +41,7 @@ const Challenges: React.FC = () => {
             <div 
               key={challenge.id} 
               id={challenge.id} 
-              className={`flex flex-col lg:flex-row items-start gap-10 md:gap-16 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} group`}
+              className={`flex flex-col lg:flex-row items-start gap-10 md:gap-16 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} group text-left`}
             >
               <div className="w-full lg:w-5/12 sticky top-28">
                 <div className="relative group/img">
@@ -47,9 +51,10 @@ const Challenges: React.FC = () => {
                       src={challenge.image} 
                       alt={challenge.title} 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105" 
-                      onError={handleImageError}
                       loading="lazy"
                       decoding="async"
+                      onLoad={handleImageLoad}
+                      onError={handleImageError}
                     />
                     <div className="absolute top-4 left-4">
                       <span className="px-3 py-1 bg-blue-600/90 backdrop-blur-sm text-white text-[9px] font-black uppercase tracking-widest rounded-lg shadow-lg">
@@ -60,7 +65,7 @@ const Challenges: React.FC = () => {
                 </div>
               </div>
 
-              <div className="w-full lg:w-7/12 text-left pt-2">
+              <div className="w-full lg:w-7/12 pt-2">
                 <div className="flex items-center space-x-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
                   <div className="w-8 h-[1px] bg-blue-600"></div>
                   <span className="text-blue-600 font-black uppercase tracking-widest text-[9px]">Strategic Sprint 0{index + 1}</span>

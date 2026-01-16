@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -31,7 +30,7 @@ const DataHub: React.FC = () => {
   }, [terminalHistory]);
 
   useEffect(() => {
-    // Simulate boot sequence
+    // Simulate boot sequence - accelerated
     const messages = [
       "INITIALIZING MISSION GENESIS DATA HUB...",
       "ESTABLISHING SECURE LINK TO NATIONAL NODE...",
@@ -48,9 +47,9 @@ const DataHub: React.FC = () => {
         current++;
       } else {
         clearInterval(interval);
-        setTimeout(() => setBootSequence(false), 800);
+        setTimeout(() => setBootSequence(false), 200);
       }
-    }, 300);
+    }, 100);
 
     return () => clearInterval(interval);
   }, []);
@@ -118,9 +117,8 @@ const DataHub: React.FC = () => {
         response = `COMMAND NOT RECOGNIZED: '${cmd}'. TYPE 'HELP' FOR SYSTEM PROTOCOLS.`;
     }
 
-    setTimeout(() => {
-      setTerminalHistory(prev => [...prev, response]);
-    }, 100);
+    // Direct response without delay
+    setTerminalHistory(prev => [...prev, response]);
     setCommandInput('');
   };
 
@@ -164,11 +162,11 @@ const DataHub: React.FC = () => {
                  <i className="fas fa-satellite-dish text-4xl text-blue-500 animate-pulse"></i>
               </div>
               <h2 className="text-xl font-black uppercase tracking-widest mb-4">Establishing Uplink</h2>
-              <p className="text-gray-500 text-xs mb-8 uppercase tracking-widest font-bold font-mono">Synchronizing Simulation Parameters for National-Skill-Audit</p>
+              <p className="text-gray-500 text-xs mb-8 uppercase tracking-widest font-bold font-mono text-center">Synchronizing Simulation Parameters for National-Skill-Audit</p>
               <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden mb-4">
                  <div className="h-full bg-blue-600 transition-all duration-300" style={{ width: `${progress}%` }}></div>
               </div>
-              <p className="text-[10px] font-mono text-blue-400">{progress}% MAPPED</p>
+              <p className="text-[10px] font-mono text-center text-blue-400">{progress}% MAPPED</p>
            </div>
         </div>
       )}
@@ -260,12 +258,12 @@ const DataHub: React.FC = () => {
               <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
               <span className="text-[10px] font-black text-blue-500 uppercase tracking-widest">Active Node: GENESIS-BUEA-ALPHA</span>
             </div>
-            <div className="inline-block border-2 border-dashed border-blue-500/40 rounded-3xl p-8 mb-4">
+            <div className="inline-block border-2 border-dashed border-blue-500/40 rounded-3xl p-8 mb-4 text-left">
               <h1 className="text-4xl md:text-7xl font-black tracking-tighter text-white uppercase text-left leading-[0.9]">
                 MISSION<br/>
                 GENESIS <span className="text-blue-500">DATA HUB</span>
               </h1>
-              <p className="text-[9px] font-bold text-blue-400 uppercase tracking-[0.4em] mt-4 opacity-60">Mission Genesis Data Hub</p>
+              <p className="text-[9px] font-bold text-blue-400 uppercase tracking-[0.4em] mt-4 opacity-60 text-left">Mission Genesis Data Hub</p>
             </div>
           </div>
           
@@ -435,7 +433,7 @@ const DataHub: React.FC = () => {
                 <i className="fas fa-vial mr-2"></i>
                 Pilot Insights
               </h4>
-              <p className="text-[11px] font-bold text-gray-400 leading-relaxed uppercase tracking-wider">
+              <p className="text-[11px] font-bold text-gray-400 leading-relaxed uppercase tracking-wider text-left">
                 Our study of <span className="text-white">50+ students</span> in Buea showed a <span className="text-emerald-400">14% growth</span> in critical thinking velocity using immersive logic challenges.
               </p>
             </div>

@@ -8,13 +8,17 @@ const VideoGrid: React.FC = () => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
+  const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    (e.target as HTMLImageElement).classList.add('loaded');
+  };
+
   return (
     <div id="video-showcase" className="py-20 bg-white dark:bg-slate-900/50 relative overflow-hidden transition-colors duration-200">
       <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#1e40af 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
-          <div className="max-w-2xl text-left">
+        <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6 text-left">
+          <div className="max-w-2xl">
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight tracking-tighter uppercase mb-2">
               Mission <span className="gradient-text">Archives</span>
             </h2>
@@ -55,11 +59,12 @@ const VideoGrid: React.FC = () => {
                     src={video.thumbnail}
                     alt={video.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                    onLoad={handleImageLoad}
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = FALLBACK_THUMBNAIL;
                     }}
-                    loading="lazy"
-                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gray-900/10 group-hover:bg-gray-900/5 transition-colors flex items-center justify-center">
                     <div className="w-12 h-12 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center text-white shadow-xl transform group-hover:scale-110 group-hover:bg-white group-hover:text-blue-600 transition-all duration-200">
@@ -73,7 +78,7 @@ const VideoGrid: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="p-6 flex flex-col justify-between flex-grow">
+                <div className="p-6 flex flex-col justify-between flex-grow text-left">
                   <div>
                     <h4 className={`font-black text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 transition-colors leading-tight ${isFeatured ? 'text-xl md:text-2xl' : 'text-lg'}`}>
                       {video.title}

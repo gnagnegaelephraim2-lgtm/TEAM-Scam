@@ -8,6 +8,19 @@ const Reviews: React.FC = () => {
     target.src = "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=800";
   };
 
+  const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    (e.target as HTMLImageElement).classList.add('loaded');
+  };
+
+  const GALLERY_IMAGES = [
+    { url: "https://i.ibb.co/6cZ25Nky/S-A-2.jpg", tag: "GENESIS_INT_01" },
+    { url: "https://i.ibb.co/yFvhwTtr/S-M-2.jpg", tag: "DISCOVER_AFRICA" },
+    { url: "https://i.ibb.co/P816TbB/F-1.jpg", tag: "HELP_LAB_BUEA" },
+    { url: "https://i.ibb.co/XfdBfvKP/S-C-9.jpg", tag: "VISION_CORE_LAUNCH" },
+    { url: "https://i.ibb.co/rRrX6GbR/J-1.jpg", tag: "DIGITAL_FOOTPRINT" },
+    { url: "https://i.ibb.co/LXcbQL8S/Pic1.jpg", tag: "BUEA_THINK_TANK" }
+  ];
+
   return (
     <div className="pt-20 bg-white dark:bg-slate-950 transition-colors duration-200 min-h-screen">
       {/* Hero Header Section */}
@@ -18,6 +31,7 @@ const Reviews: React.FC = () => {
             alt="Story Background" 
             className="w-full h-full object-cover"
             onError={handleImageError}
+            onLoad={handleImageLoad}
             loading="eager"
             decoding="async"
           />
@@ -43,7 +57,7 @@ const Reviews: React.FC = () => {
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="space-y-12 md:space-y-16">
           {TEAM_MEMBERS.map((member) => (
             <div key={member.id} className="group bg-white dark:bg-slate-900 rounded-[36px] p-6 md:p-10 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col lg:flex-row gap-10 items-center lg:items-start text-left">
@@ -56,6 +70,7 @@ const Reviews: React.FC = () => {
                       src={member.image} 
                       alt={member.name} 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                      onLoad={handleImageLoad}
                       onError={handleImageError}
                       loading="lazy"
                       decoding="async"
@@ -77,17 +92,17 @@ const Reviews: React.FC = () => {
                 
                 <h3 className="text-xl md:text-2xl font-black text-slate-950 dark:text-white mb-4 tracking-tight group-hover:text-blue-600 transition-colors duration-300">{member.name}</h3>
                 
-                <div className="relative mb-8">
+                <div className="relative mb-8 text-left">
                   <i className="fas fa-quote-left text-slate-100 dark:text-blue-900/10 text-5xl absolute -top-6 -left-6 -z-10"></i>
-                  <p className="text-slate-700 dark:text-gray-400 text-base md:text-lg leading-relaxed italic font-medium relative z-10">
+                  <p className="text-slate-700 dark:text-gray-400 text-base md:text-lg leading-relaxed italic font-medium relative z-10 text-left">
                     "{member.reflection}"
                   </p>
                 </div>
 
-                <div className="pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6">
-                  <div className="max-w-md">
-                    <h4 className="text-[10px] font-black text-slate-500 dark:text-gray-500 uppercase tracking-[0.3em] mb-2">Core Contribution</h4>
-                    <p className="text-slate-600 dark:text-gray-400 text-sm leading-relaxed font-medium">
+                <div className="pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 text-left">
+                  <div className="max-w-md text-left">
+                    <h4 className="text-[10px] font-black text-slate-500 dark:text-gray-500 uppercase tracking-[0.3em] mb-2 text-left">Core Contribution</h4>
+                    <p className="text-slate-600 dark:text-gray-400 text-sm leading-relaxed font-medium text-left">
                       {member.contribution}
                     </p>
                   </div>
@@ -100,8 +115,53 @@ const Reviews: React.FC = () => {
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Data Analysis Section */}
+      {/* New Mission Gallery Section */}
+      <section className="py-24 bg-slate-50 dark:bg-slate-900/30 relative overflow-hidden transition-colors duration-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-16 text-left">
+            <h2 className="text-blue-600 font-black uppercase tracking-[0.2em] text-[10px] mb-4 text-left">Visual Documentation</h2>
+            <h3 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter text-left uppercase leading-none">
+              Mission <span className="text-blue-600">Gallery</span>
+            </h3>
+            <p className="text-slate-500 dark:text-gray-400 mt-4 text-lg font-medium text-left">Captured moments of innovation, collaboration, and impact.</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {GALLERY_IMAGES.map((img, idx) => (
+              <div 
+                key={idx} 
+                className={`group relative overflow-hidden rounded-[32px] bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/5 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${idx === 0 || idx === 3 ? 'sm:row-span-2' : ''}`}
+              >
+                <div className="aspect-[3/4] overflow-hidden">
+                  <img 
+                    src={img.url} 
+                    alt={img.tag} 
+                    className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
+                    onLoad={handleImageLoad}
+                    onError={handleImageError}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                  <div className="text-left">
+                    <span className="text-blue-400 font-mono text-[10px] uppercase tracking-widest font-black block mb-2">ARCHIVE_ID: {img.tag}</span>
+                    <p className="text-white font-black uppercase text-xs tracking-tighter">Mission Genesis Journey</p>
+                  </div>
+                </div>
+                <div className="absolute top-4 right-4 w-8 h-8 rounded-lg bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                  <i className="fas fa-expand text-[10px]"></i>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Data Analysis Section */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
         <section className="mt-24 bg-slate-950 dark:bg-black rounded-[48px] p-10 md:p-16 text-center relative overflow-hidden group transition-all duration-300 shadow-2xl">
           <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
           
@@ -129,6 +189,7 @@ const Reviews: React.FC = () => {
           </div>
         </section>
       </div>
+
       <style>{`
         .animate-fade-in {
           animation: fadeIn 0.4s ease-out forwards;
