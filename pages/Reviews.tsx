@@ -13,12 +13,14 @@ const Reviews: React.FC = () => {
   };
 
   const GALLERY_IMAGES = [
-    { url: "https://i.ibb.co/6cZ25Nky/S-A-2.jpg", tag: "GENESIS_INT_01" },
-    { url: "https://i.ibb.co/yFvhwTtr/S-M-2.jpg", tag: "DISCOVER_AFRICA" },
-    { url: "https://i.ibb.co/P816TbB/F-1.jpg", tag: "HELP_LAB_BUEA" },
-    { url: "https://i.ibb.co/XfdBfvKP/S-C-9.jpg", tag: "VISION_CORE_LAUNCH" },
-    { url: "https://i.ibb.co/rRrX6GbR/J-1.jpg", tag: "DIGITAL_FOOTPRINT" },
-    { url: "https://i.ibb.co/LXcbQL8S/Pic1.jpg", tag: "BUEA_THINK_TANK" }
+    { url: "https://i.ibb.co/hx4QB1Mk/Pic9.jpg", tag: "GENESIS_DISCOVERY", title: "Field Research Buea" },
+    { url: "https://i.ibb.co/6cZ25Nky/S-A-2.jpg", tag: "GENESIS_INT_01", title: "Technical Blueprint" },
+    { url: "https://i.ibb.co/4R7Fvd7v/S-B-2.jpg", tag: "LAB_OPERATIONS", title: "Innovation Lab" },
+    { url: "https://i.ibb.co/P816TbB/F-1.jpg", tag: "HELP_LAB_BUEA", title: "Community Outreach" },
+    { url: "https://i.ibb.co/XfdBfvKP/S-C-9.jpg", tag: "VISION_CORE_LAUNCH", title: "Core Architecture" },
+    { url: "https://i.ibb.co/yFvhwTtr/S-M-2.jpg", tag: "DISCOVER_AFRICA", title: "Cultural Context" },
+    { url: "https://i.ibb.co/rRrX6GbR/J-1.jpg", tag: "DIGITAL_FOOTPRINT", title: "Platform Alpha" },
+    { url: "https://i.ibb.co/LXcbQL8S/Pic1.jpg", tag: "BUEA_THINK_TANK", title: "Strategic Session" }
   ];
 
   return (
@@ -57,6 +59,7 @@ const Reviews: React.FC = () => {
         </div>
       </section>
 
+      {/* Reflections Timeline */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="space-y-12 md:space-y-16">
           {TEAM_MEMBERS.map((member) => (
@@ -117,7 +120,7 @@ const Reviews: React.FC = () => {
         </div>
       </div>
 
-      {/* New Mission Gallery Section */}
+      {/* Optimized Mission Gallery Section */}
       <section className="py-24 bg-slate-50 dark:bg-slate-900/30 relative overflow-hidden transition-colors duration-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-left">
@@ -125,16 +128,16 @@ const Reviews: React.FC = () => {
             <h3 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter text-left uppercase leading-none">
               Mission <span className="text-blue-600">Gallery</span>
             </h3>
-            <p className="text-slate-500 dark:text-gray-400 mt-4 text-lg font-medium text-left">Captured moments of innovation, collaboration, and impact.</p>
+            <p className="text-slate-500 dark:text-gray-400 mt-4 text-lg font-medium text-left">A pictorial journey through the genesis of an educational revolution.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {GALLERY_IMAGES.map((img, idx) => (
               <div 
                 key={idx} 
-                className={`group relative overflow-hidden rounded-[32px] bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/5 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${idx === 0 || idx === 3 ? 'sm:row-span-2' : ''}`}
+                className={`group relative overflow-hidden rounded-[32px] bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/5 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${idx === 0 || idx === 3 || idx === 6 ? 'sm:row-span-2' : ''}`}
               >
-                <div className="aspect-[3/4] overflow-hidden">
+                <div className="h-full overflow-hidden">
                   <img 
                     src={img.url} 
                     alt={img.tag} 
@@ -145,10 +148,10 @@ const Reviews: React.FC = () => {
                     decoding="async"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                   <div className="text-left">
-                    <span className="text-blue-400 font-mono text-[10px] uppercase tracking-widest font-black block mb-2">ARCHIVE_ID: {img.tag}</span>
-                    <p className="text-white font-black uppercase text-xs tracking-tighter">Mission Genesis Journey</p>
+                    <span className="text-blue-400 font-mono text-[9px] uppercase tracking-widest font-black block mb-2">ARCHIVE_ID: {img.tag}</span>
+                    <p className="text-white font-black uppercase text-xs tracking-tighter">{img.title}</p>
                   </div>
                 </div>
                 <div className="absolute top-4 right-4 w-8 h-8 rounded-lg bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -160,30 +163,38 @@ const Reviews: React.FC = () => {
         </div>
       </section>
 
-      {/* Data Analysis Section */}
+      {/* Enhanced Data Analysis Section - Transformed to White Mode */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        <section className="mt-24 bg-slate-950 dark:bg-black rounded-[48px] p-10 md:p-16 text-center relative overflow-hidden group transition-all duration-300 shadow-2xl">
-          <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+        <section className="mt-24 bg-white dark:bg-slate-900 rounded-[48px] p-10 md:p-16 text-center relative overflow-hidden group transition-all duration-500 shadow-2xl border border-slate-200 dark:border-white/10">
+          <div className="absolute inset-0 z-0">
+             <img 
+               src="https://i.ibb.co/hx4QB1Mk/Pic9.jpg" 
+               className="w-full h-full object-cover opacity-20 dark:opacity-10 group-hover:scale-105 transition-transform duration-[3s]" 
+               alt="Background Analysis" 
+               onLoad={handleImageLoad}
+             />
+             <div className="absolute inset-0 bg-white/60 dark:bg-slate-900/80 backdrop-blur-[1px]"></div>
+          </div>
           
           <div className="relative z-10 py-4">
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tighter">
-              Data <span className="text-blue-500">Analysis</span>
+            <h2 className="text-3xl md:text-6xl font-black text-slate-950 dark:text-white mb-6 tracking-tighter leading-none">
+              Data <span className="text-blue-600">Analysis</span>
             </h2>
-            <p className="text-sm md:text-lg text-gray-400 dark:text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed font-medium text-center">
-              Rapid validation of educational gaps in Cameroon via real-time student profiling and surveys.
+            <p className="text-sm md:text-xl text-slate-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed font-bold text-center uppercase tracking-wide">
+              Validating educational gaps in Cameroon via real-time student profiling.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a 
                 href={`mailto:ayuksandrine5@gmail.com`} 
-                className="w-full sm:w-auto bg-blue-600 text-white px-8 py-4 rounded-xl font-black uppercase tracking-widest text-[11px] hover:bg-blue-500 transition-all shadow-xl active:scale-95"
+                className="w-full sm:w-auto bg-blue-600 text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-[11px] hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/20 active:scale-95"
               >
-                Contact Us
+                Contact Team
               </a>
               <Link 
                 to="/data-hub"
-                className="w-full sm:w-auto bg-white/5 text-white border border-white/10 px-8 py-4 rounded-xl font-black uppercase tracking-widest text-[11px] hover:bg-white/10 transition-all active:scale-95"
+                className="w-full sm:w-auto bg-slate-950 dark:bg-white text-white dark:text-slate-950 border border-slate-200 dark:border-white/10 px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-[11px] hover:bg-slate-800 dark:hover:bg-slate-100 transition-all active:scale-95"
               >
-                Enter Data Hub
+                Access Data Hub
               </Link>
             </div>
           </div>
